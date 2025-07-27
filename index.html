@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezaleel Paul N | AI Coder</title>
+    <style>
+        :root {
+            --primary: #00ff00;
+            --primary-dark: #006600;
+            --bg: #0a0a0a;
+            --text: #e0e0e0;
+            --terminal: #0d300d;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary);
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px var(--primary); }
+            to { text-shadow: 0 0 15px var(--primary), 0 0 20px var(--primary-dark); }
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        .bio {
+            background: var(--terminal);
+            border: 1px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 2rem 0;
+            box-shadow: 0 0 15px var(--primary-dark);
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid var(--primary);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 0.1em;
+            animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary) }
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .skill {
+            background: var(--terminal);
+            border: 1px solid var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: var(--primary);
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.8; }
+        }
+        .projects {
+            margin: 3rem 0;
+        }
+        .project {
+            background: var(--terminal);
+            border-left: 3px solid var(--primary);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: translateX(10px);
+            box-shadow: 0 0 20px var(--primary-dark);
+        }
+        .project h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .socials {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .social-link {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .social-link:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 10px var(--primary);
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            border-top: 1px solid var(--primary-dark);
+        }
+        /* Hacker matrix effect (optional) */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Optional: Uncomment for Matrix effect (adds cyberpunk vibe) -->
+    <!-- <canvas id="matrix" class="matrix-bg"></canvas> -->
+
+    <div class="container">
+        <header>
+            <h1>Bezaleel Paul N</h1>
+            <p class="tagline">☢️ Just an AI coder with unlimited potential ☢️</p>
+        </header>
+
+        <section class="bio">
+            <div class="typewriter">
+                >_ Hello World! I build AI systems that evolve. Skills? Unlimited. Time? The only constraint.
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>🛠️ Skills (Loading...)</h2>
+            <div class="skills">
+                <span class="skill">AI Development</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Neural Networks</span>
+                <span class="skill">Python</span>
+                <span class="skill">Quantum Computing</span>
+                <span class="skill">∞ More</span>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>🚀 Projects (Coming Soon)</h2>
+            <div class="project">
+                <h3>Project X-1</h3>
+                <p>Classified AI research. [REDACTED]</p>
+            </div>
+            <div class="project">
+                <h3>Project Zero-Day</h3>
+                <p>Cybersecurity toolkit with neural firewalls.</p>
+            </div>
+            <!-- Add your GitHub links later -->
+        </section>
+
+        <section class="contact">
+            <h2>📡 Connect</h2>
+            <div class="socials">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+                <!-- Update these later -->
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Bezaleel Paul N | Built with chaotic energy</p>
+        </footer>
+    </div>
+
+    <!-- Optional: Matrix JS (uncomment if you want the animation) -->
+    <!--
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const alphabet = katakana + latin + nums;
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const rainDrops = [];
+        for (let x = 0; x < columns; x++) { rainDrops[x] = 1; }
+        const draw = () => {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#0f0';
+            ctx.font = fontSize + 'px monospace';
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) rainDrops[i] = 0;
+                rainDrops[i]++;
+            }
+        };
+        setInterval(draw, 30);
+    </script>
+    -->
+</body>
+</html>
