@@ -7,11 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #00ff00;
-            --primary-dark: #006600;
+            --primary: #00ff88;
+            --primary-dark: #00cc44;
             --bg: #0a0a0a;
             --text: #e0e0e0;
-            --terminal: #0d300d;
+            --terminal: #1a3c1a;
         }
         body {
             background: var(--bg);
@@ -19,11 +19,11 @@
             font-family: 'Courier New', monospace;
         }
         .glow {
-            animation: glow 2s infinite alternate;
+            animation: glow 1.5s infinite alternate;
         }
         @keyframes glow {
             from { text-shadow: 0 0 5px var(--primary); }
-            to { text-shadow: 0 0 15px var(--primary), 0 0 20px var(--primary-dark); }
+            to { text-shadow: 0 0 12px var(--primary), 0 0 18px var(--primary-dark); }
         }
         .typewriter {
             overflow: hidden;
@@ -40,8 +40,12 @@
             50% { border-color: var(--primary) }
         }
         .project:hover {
-            transform: translateX(10px);
-            box-shadow: 0 0 20px var(--primary-dark);
+            transform: translateX(8px);
+            box-shadow: 0 0 15px var(--primary-dark);
+        }
+        .skill:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px var(--primary);
         }
         .matrix-bg {
             position: fixed;
@@ -50,7 +54,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            opacity: 0.1;
+            opacity: 0.15;
         }
     </style>
 </head>
@@ -58,50 +62,50 @@
     <canvas id="matrix" class="matrix-bg"></canvas>
     <div class="container max-w-5xl mx-auto p-8">
         <header class="text-center mb-12">
-            <h1 class="text-5xl font-bold text-green-500 glow">Bezaleel Paul N</h1>
+            <h1 class="text-5xl font-bold text-green-400 glow">Bezaleel Paul N</h1>
             <p class="text-xl opacity-90 mt-2">☢️ Aspiring AI Architect with Infinite Potential ☢️</p>
         </header>
 
-        <section class="bio bg-gray-900 border border-green-500 p-6 rounded-lg shadow-lg mb-12">
+        <section class="bio bg-gray-900 border border-green-400 p-6 rounded-lg shadow-lg mb-12">
             <div class="typewriter text-lg">
                 >_ Building the future of AI. Skills honed, projects in progress.
             </div>
         </section>
 
         <section class="skills mb-12">
-            <h2 class="text-2xl font-bold text-green-500 mb-4">🛠️ Core Technologies</h2>
+            <h2 class="text-2xl font-bold text-green-400 mb-4">🛠️ Core Technologies</h2>
             <div class="flex flex-wrap gap-4">
-                <span class="bg-gray-900 border border-green-500 text-green-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition">AI Development</span>
-                <span class="bg-gray-900 border border-green-500 text-green-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition">Machine Learning</span>
-                <span class="bg-gray-900 border border-green-500 text-green-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition">Python</span>
-                <span class="bg-gray-900 border border-green-500 text-green-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition">TensorFlow</span>
-                <span class="bg-gray-900 border border-green-500 text-green-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition">PyTorch</span>
-                <span class="bg-gray-900 border border-green-500 text-green-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition">Quantum Computing</span>
+                <span class="bg-gray-900 border border-green-400 text-green-400 px-4 py-2 rounded-full font-bold skill transition">AI Development</span>
+                <span class="bg-gray-900 border border-green-400 text-green-400 px-4 py-2 rounded-full font-bold skill transition">Machine Learning</span>
+                <span class="bg-gray-900 border border-green-400 text-green-400 px-4 py-2 rounded-full font-bold skill transition">Python</span>
+                <span class="bg-gray-900 border border-green-400 text-green-400 px-4 py-2 rounded-full font-bold skill transition">TensorFlow</span>
+                <span class="bg-gray-900 border border-green-400 text-green-400 px-4 py-2 rounded-full font-bold skill transition">PyTorch</span>
+                <span class="bg-gray-900 border border-green-400 text-green-400 px-4 py-2 rounded-full font-bold skill transition">Quantum Computing</span>
             </div>
         </section>
 
         <section class="projects mb-12">
-            <h2 class="text-2xl font-bold text-green-500 mb-4">🚀 Projects (In Development)</h2>
-            <div class="project bg-gray-900 border-l-4 border-green-500 p-6 mb-6 transition">
-                <h3 class="text-xl text-green-500">AI Research Project</h3>
-                <p>Developing cutting-edge AI solutions. Details coming soon. <a href="#" class="text-green-500 underline">GitHub (TBD)</a></p>
+            <h2 class="text-2xl font-bold text-green-400 mb-4">🚀 Projects (In Development)</h2>
+            <div class="project bg-gray-900 border-l-4 border-green-400 p-6 mb-6 transition">
+                <h3 class="text-xl text-green-400">AI Research Project</h3>
+                <p>Developing cutting-edge AI solutions. Details coming soon. <a href="#" class="text-green-400 underline">GitHub (TBD)</a></p>
             </div>
-            <div class="project bg-gray-900 border-l-4 border-green-500 p-6 mb-6 transition">
-                <h3 class="text-xl text-green-500">Neural Security Framework</h3>
-                <p>Exploring AI-driven cybersecurity tools. Stay tuned for updates. <a href="#" class="text-green-500 underline">GitHub (TBD)</a></p>
+            <div class="project bg-gray-900 border-l-4 border-green-400 p-6 mb-6 transition">
+                <h3 class="text-xl text-green-400">Neural Security Framework</h3>
+                <p>Exploring AI-driven cybersecurity tools. Stay tuned for updates. <a href="#" class="text-green-400 underline">GitHub (TBD)</a></p>
             </div>
         </section>
 
         <section class="contact mb-12">
-            <h2 class="text-2xl font-bold text-green-500 mb-4">📡 Connect</h2>
+            <h2 class="text-2xl font-bold text-green-400 mb-4">📡 Connect</h2>
             <div class="flex justify-center gap-6">
-                <a href="#" class="text-green-500 text-2xl hover:scale-125 transition">GitHub</a>
-                <a href="#" class="text-green-500 text-2xl hover:scale-125 transition">LinkedIn</a>
-                <a href="#" class="text-green-500 text-2xl hover:scale-125 transition">Twitter</a>
+                <a href="#" class="text-green-400 text-2xl hover:scale-125 transition">GitHub</a>
+                <a href="#" class="text-green-400 text-2xl hover:scale-125 transition">LinkedIn</a>
+                <a href="#" class="text-green-400 text-2xl hover:scale-125 transition">Twitter</a>
             </div>
         </section>
 
-        <footer class="text-center border-t border-green-900 pt-4">
+        <footer class="text-center border-t border-green-800 pt-4">
             <p>© 2025 Bezaleel Paul N | Built with relentless innovation</p>
         </footer>
     </div>
@@ -122,7 +126,7 @@
         const draw = () => {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#0f0';
+            ctx.fillStyle = '#00ff88';
             ctx.font = fontSize + 'px monospace';
             for (let i = 0; i < rainDrops.length; i++) {
                 const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
