@@ -1,0 +1,57 @@
+name: Auto-Build Portfolio
+
+on:
+  schedule:
+    - cron: "30 */6 * * *"
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source (BezaleelPaul profile repo)
+        uses: actions/checkout@v4
+        with:
+          repository: BezaleelPaul/BezaleelPaul
+          path: source
+
+      - name: Checkout This Repo
+        uses: actions/checkout@v4
+        with:
+          path: site-repo
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build Assets & Profile Data
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd source && python main.py && cd ..
+
+      - name: Sync Built Site
+        run: |
+          rm -rf site-repo/css site-repo/js site-repo/data
+          cp -r source/site/css site-repo/css
+          cp -r source/site/js site-repo/js
+          cp -r source/site/data site-repo/data
+          cp -f source/site/index.html site-repo/index.html
+          cp -f source/site/.nojekyll site-repo/.nojekyll
+
+      - name: Commit & Push
+        run: |
+          cd site-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: sync portfolio site [skip ci]"
+          git push

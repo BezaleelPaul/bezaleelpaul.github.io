@@ -1,907 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Bezaleel Paul N — Resume</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --bg: #050810;
-  --bg2: #0a0f1e;
-  --bg3: #0d1428;
-  --cyan: #00ffff;
-  --pink: #ff0080;
-  --purple: #8b00ff;
-  --green: #00ff88;
-  --yellow: #ffd700;
-  --dim: #3a4558;
-  --mid: #8892a4;
-  --bright: #e2e8f0;
-  --gcyan: 0 0 12px #00ffff55, 0 0 32px #00ffff22;
-  --gpink: 0 0 12px #ff008055, 0 0 32px #ff008022;
-  --ggreen: 0 0 12px #00ff8855;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--bg);
-  color:var(--bright);
-  font-family:'Share Tech Mono',monospace;
-  overflow-x:hidden;
-  cursor:none;
-}
-/* CURSOR */
-#cur{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:var(--gcyan);transition:width .15s,height .15s,background .15s;}
-#cur-ring{position:fixed;width:32px;height:32px;border:1px solid var(--cyan);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.45;transition:width .08s,height .08s,border-color .15s;}
-/* SCANLINES */
-body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px);pointer-events:none;z-index:9000;}
-/* BG CANVAS */
-#bgc{position:fixed;inset:0;z-index:0;pointer-events:none;}
-.page{position:relative;z-index:1;}
-
-/* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:500;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:12px 48px;
-  background:rgba(5,8,16,.9);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(0,255,255,.08);
-}
-.nav-id{font-family:'Orbitron',sans-serif;font-size:12px;color:var(--cyan);letter-spacing:4px;text-shadow:var(--gcyan);}
-.nav-links{display:flex;gap:24px;}
-.nav-links a{color:var(--mid);text-decoration:none;font-size:10px;letter-spacing:2px;text-transform:uppercase;transition:color .2s;position:relative;}
-.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--cyan);transition:right .3s;}
-.nav-links a:hover,.nav-links a.active{color:var(--cyan);}
-.nav-links a:hover::after,.nav-links a.active::after{right:0;}
-.nav-status{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--green);letter-spacing:2px;}
-.pulse{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pg 2s infinite;}
-@keyframes pg{0%,100%{box-shadow:0 0 0 0 #00ff8899;}50%{box-shadow:0 0 0 6px #00ff8800;}}
-@media(max-width:760px){.nav-links{display:none;}nav{padding:12px 20px;}}
-
-/* ── HERO ── */
-.hero{
-  min-height:100vh;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  text-align:center;padding:90px 24px 60px;
-  position:relative;
-}
-.hero-eyebrow{font-size:10px;letter-spacing:5px;color:var(--pink);border:1px solid rgba(255,0,128,.25);padding:5px 16px;border-radius:2px;margin-bottom:28px;animation:fu .9s ease both;text-shadow:var(--gpink);}
-.hero-name{font-family:'Orbitron',sans-serif;font-size:clamp(36px,9vw,96px);font-weight:900;line-height:.95;letter-spacing:2px;animation:glitch 9s infinite,fu .9s .1s ease both;background:linear-gradient(135deg,#fff 0%,var(--cyan) 45%,var(--pink) 85%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.hero-title{font-family:'Rajdhani',sans-serif;font-size:clamp(13px,2.5vw,18px);font-weight:300;color:var(--mid);letter-spacing:7px;margin-top:14px;text-transform:uppercase;animation:fu .9s .2s ease both;}
-.typing-wrap{margin-top:24px;height:26px;font-size:13px;color:var(--green);letter-spacing:2px;animation:fu .9s .3s ease both;}
-.typer::after{content:'█';animation:blink 1s infinite;}
-@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-.hero-tagline{max-width:560px;margin:28px auto 0;font-family:'Rajdhani',sans-serif;font-size:14px;color:var(--dim);line-height:1.9;border-left:2px solid var(--purple);padding-left:18px;text-align:left;animation:fu .9s .4s ease both;}
-.hero-btns{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;justify-content:center;animation:fu .9s .5s ease both;}
-.btn{padding:11px 26px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:2px;text-decoration:none;text-transform:uppercase;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;border:none;}
-.btn::before{content:'';position:absolute;inset:0;transform:translateX(-100%);transition:transform .3s;}
-.btn:hover::before{transform:translateX(0);}
-.btn span{position:relative;z-index:1;}
-.btn-c{background:transparent;border:1px solid var(--cyan);color:var(--cyan);}
-.btn-c::before{background:var(--cyan);}
-.btn-c:hover{color:var(--bg);box-shadow:var(--gcyan);}
-.btn-p{background:transparent;border:1px solid var(--pink);color:var(--pink);}
-.btn-p::before{background:var(--pink);}
-.btn-p:hover{color:var(--bg);box-shadow:var(--gpink);}
-.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--dim);font-size:9px;letter-spacing:3px;animation:fu .9s .9s ease both;}
-.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:sa 2s infinite;}
-@keyframes sa{0%{opacity:0;transform:scaleY(0);transform-origin:top}50%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(0);transform-origin:bottom}}
-@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-@keyframes glitch{0%,94%,100%{clip-path:none;transform:none}95%{clip-path:inset(20% 0 60% 0);transform:translateX(-4px)}96.5%{clip-path:inset(60% 0 20% 0);transform:translateX(4px)}98%{clip-path:none;transform:none}}
-
-/* ── SECTION SHELL ── */
-.sec{padding:90px 48px;max-width:1200px;margin:0 auto;}
-@media(max-width:760px){.sec{padding:72px 20px;}}
-.sec-hd{display:flex;align-items:center;gap:16px;margin-bottom:52px;}
-.sec-num{font-family:'Orbitron',sans-serif;font-size:10px;color:var(--pink);letter-spacing:3px;}
-.sec-title{font-family:'Orbitron',sans-serif;font-size:clamp(16px,2.8vw,24px);font-weight:700;color:var(--bright);letter-spacing:3px;text-transform:uppercase;}
-.sec-line{flex:1;height:1px;background:linear-gradient(to right,rgba(0,255,255,.3),transparent);}
-.neon-divider{height:1px;background:linear-gradient(to right,transparent,var(--pink),var(--cyan),var(--purple),transparent);opacity:.3;}
-
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.vis{opacity:1;transform:none;}
-
-/* ── TERMINAL ── */
-.terminal{background:rgba(10,15,30,.85);border:1px solid rgba(0,255,255,.12);border-radius:8px;overflow:hidden;backdrop-filter:blur(8px);}
-.t-bar{background:rgba(0,255,255,.04);border-bottom:1px solid rgba(0,255,255,.08);padding:11px 16px;display:flex;align-items:center;gap:7px;}
-.td{width:9px;height:9px;border-radius:50%;}
-.td.r{background:#ff5f57;} .td.y{background:#febc2e;} .td.g{background:#28c840;}
-.t-ttl{color:var(--dim);font-size:10px;letter-spacing:2px;margin-left:8px;}
-.t-body{padding:22px 24px;}
-.tl{margin:3px 0;font-size:12px;line-height:1.8;}
-.tp{color:var(--green);}
-.tc{color:var(--cyan);}
-.to{color:var(--mid);padding-left:14px;}
-.tv{color:var(--pink);}
-
-/* ── ABOUT ── */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
-@media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
-.about-p{font-family:'Rajdhani',sans-serif;font-size:15px;line-height:1.95;color:var(--mid);margin-bottom:14px;}
-.about-p em{color:var(--cyan);font-style:normal;}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;}
-.chip{padding:5px 13px;border:1px solid rgba(139,0,255,.35);color:var(--purple);font-size:10px;letter-spacing:2px;border-radius:2px;transition:all .2s;cursor:default;}
-.chip:hover{background:rgba(139,0,255,.1);border-color:var(--purple);box-shadow:0 0 10px rgba(139,0,255,.25);}
-
-/* ── RESUME GRID ── */
-.resume-layout{display:grid;grid-template-columns:1fr 340px;gap:40px;}
-@media(max-width:900px){.resume-layout{grid-template-columns:1fr;}}
-
-/* ── TIMELINE ── */
-.timeline{display:flex;flex-direction:column;gap:0;}
-.tl-item{display:grid;grid-template-columns:120px 1px 1fr;gap:0 20px;position:relative;}
-.tl-date{font-size:10px;letter-spacing:2px;color:var(--dim);padding-top:4px;text-align:right;padding-right:20px;}
-.tl-pipe{background:rgba(0,255,255,.15);position:relative;}
-.tl-pipe::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:var(--gcyan);}
-.tl-content{padding-bottom:36px;padding-left:20px;}
-.tl-role{font-family:'Orbitron',sans-serif;font-size:12px;letter-spacing:2px;color:var(--bright);}
-.tl-org{font-size:11px;color:var(--cyan);letter-spacing:1px;margin-top:3px;}
-.tl-desc{font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--mid);line-height:1.75;margin-top:8px;}
-.tl-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
-.tl-tag{padding:3px 9px;background:rgba(0,255,255,.05);border:1px solid rgba(0,255,255,.12);color:var(--mid);font-size:10px;letter-spacing:1px;border-radius:2px;}
-.tl-blank{color:var(--dim);font-size:11px;letter-spacing:1px;margin-top:4px;font-style:italic;}
-
-/* ── SIDE PANEL ── */
-.side-section{margin-bottom:32px;}
-.side-title{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:3px;color:var(--pink);margin-bottom:16px;text-transform:uppercase;padding-bottom:8px;border-bottom:1px solid rgba(255,0,128,.15);}
-
-/* SKILL BARS */
-.skill-rows{display:flex;flex-direction:column;gap:12px;}
-.sk-row{}
-.sk-lbl{display:flex;justify-content:space-between;font-size:10px;letter-spacing:1px;color:var(--mid);margin-bottom:5px;}
-.sk-lbl span:last-child{color:var(--cyan);}
-.sk-track{height:2px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden;}
-.sk-fill{height:100%;border-radius:2px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1);}
-.sf1{background:linear-gradient(to right,var(--cyan),var(--purple));}
-.sf2{background:linear-gradient(to right,var(--pink),var(--purple));}
-.sf3{background:linear-gradient(to right,var(--green),var(--cyan));}
-.sf4{background:linear-gradient(to right,var(--purple),var(--pink));}
-.sf5{background:linear-gradient(to right,var(--yellow),var(--green));}
-
-/* INFO LIST */
-.info-list{display:flex;flex-direction:column;gap:10px;}
-.info-row{display:flex;align-items:center;gap:10px;font-size:11px;}
-.info-key{color:var(--dim);letter-spacing:1px;min-width:90px;}
-.info-val{color:var(--bright);}
-.info-val a{color:var(--cyan);text-decoration:none;}
-.info-val a:hover{text-decoration:underline;}
-
-/* LANG LIST */
-.lang-list{display:flex;flex-direction:column;gap:8px;}
-.lang-row{display:flex;justify-content:space-between;align-items:center;font-size:11px;}
-.lang-name{color:var(--mid);}
-.lang-dots{display:flex;gap:4px;}
-.lang-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.1);}
-.lang-dot.on{background:var(--cyan);}
-
-/* TOOLS GRID */
-.tools-grid{display:flex;flex-wrap:wrap;gap:7px;}
-.tool-tag{padding:4px 10px;background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.15);color:var(--green);font-size:10px;letter-spacing:1px;border-radius:2px;transition:all .2s;cursor:default;}
-.tool-tag:hover{background:rgba(0,255,136,.1);}
-
-/* ── PROJECTS ── */
-.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px;}
-@media(max-width:760px){.proj-grid{grid-template-columns:1fr;}}
-.proj-card{background:rgba(10,15,30,.75);border:1px solid rgba(255,255,255,.05);border-radius:6px;overflow:hidden;transition:all .35s;cursor:default;}
-.proj-card:hover{border-color:rgba(0,255,255,.25);transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 28px rgba(0,255,255,.07);}
-.proj-hd{padding:22px 22px 14px;border-bottom:1px solid rgba(255,255,255,.04);}
-.proj-ico{font-size:26px;margin-bottom:10px;}
-.proj-name{font-family:'Orbitron',sans-serif;font-size:12px;letter-spacing:2px;color:var(--bright);}
-.proj-line{font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--cyan);margin-top:3px;letter-spacing:1px;}
-.proj-bd{padding:14px 22px 22px;}
-.proj-desc{font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--mid);line-height:1.75;margin-bottom:14px;}
-.proj-ul{list-style:none;display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
-.proj-ul li{font-size:11px;color:var(--dim);padding-left:14px;position:relative;font-family:'Rajdhani',sans-serif;}
-.proj-ul li::before{content:'▸';position:absolute;left:0;color:var(--green);}
-.proj-stack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
-.sp{padding:3px 9px;background:rgba(139,0,255,.08);border:1px solid rgba(139,0,255,.2);color:var(--purple);font-size:10px;letter-spacing:1px;border-radius:20px;}
-.proj-links{display:flex;gap:9px;}
-.pl{padding:7px 14px;font-size:10px;letter-spacing:1px;text-decoration:none;border-radius:2px;transition:all .2s;font-family:'Share Tech Mono',monospace;}
-.pl.gh{border:1px solid rgba(255,255,255,.12);color:var(--mid);}
-.pl.gh:hover{border-color:var(--mid);color:var(--bright);}
-.pl.live{background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.25);color:var(--green);}
-.pl.live:hover{background:rgba(0,255,136,.16);}
-
-/* ── STATS SECTION ── */
-.stats-boxes{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-bottom:40px;}
-.stat-box{background:rgba(10,15,30,.75);border:1px solid rgba(255,255,255,.04);padding:22px;text-align:center;border-radius:4px;transition:all .3s;position:relative;overflow:hidden;cursor:default;}
-.stat-box::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--cyan);transform:scaleX(0);transition:transform .4s;}
-.stat-box:hover::after{transform:scaleX(1);}
-.stat-box:hover{transform:translateY(-4px);}
-.stat-n{font-family:'Orbitron',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:900;background:linear-gradient(135deg,var(--cyan),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.stat-l{font-size:9px;letter-spacing:3px;color:var(--dim);margin-top:6px;text-transform:uppercase;}
-
-/* GITHUB LIVE */
-.gh-embed{background:rgba(10,15,30,.6);border:1px solid rgba(0,255,255,.08);border-radius:8px;padding:28px;text-align:center;}
-.gh-embed img{border-radius:6px;max-width:100%;}
-.gh-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:22px;}
-.gh-row img{height:155px;}
-
-/* CP */
-.cp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px;margin-bottom:36px;}
-.cp-card{background:rgba(10,15,30,.75);border:1px solid rgba(255,255,255,.04);padding:18px;text-align:center;border-radius:4px;text-decoration:none;transition:all .3s;display:block;}
-.cp-card:hover{border-color:rgba(0,255,255,.25);transform:translateY(-3px);background:rgba(0,255,255,.02);}
-.cp-plat{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;margin-bottom:8px;text-transform:uppercase;}
-.cp-handle{font-size:11px;color:var(--dim);letter-spacing:1px;}
-.cp-stat{font-size:13px;margin-top:6px;font-family:'Orbitron',sans-serif;font-weight:700;}
-.cp-card.cf .cp-plat{color:#1F8ACB;}
-.cp-card.lc .cp-plat{color:#FFA116;}
-.cp-card.cc .cp-plat{color:#9b7960;}
-.cp-card.hr .cp-plat{color:#2EC866;}
-.cp-card.kg .cp-plat{color:#20BEFF;}
-
-/* ── CONTACT ── */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
-@media(max-width:760px){.contact-grid{grid-template-columns:1fr;}}
-.contact-links{display:flex;flex-direction:column;gap:10px;}
-.cl{display:flex;align-items:center;gap:14px;padding:14px 18px;background:rgba(10,15,30,.75);border:1px solid rgba(255,255,255,.04);text-decoration:none;border-radius:4px;transition:all .3s;color:var(--mid);}
-.cl:hover{border-color:rgba(0,255,255,.25);color:var(--bright);transform:translateX(5px);}
-.cl-ico{font-size:18px;}
-.cl-plat{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;color:var(--cyan);display:block;}
-.cl-handle{font-size:11px;color:var(--dim);}
-.cl-arr{margin-left:auto;color:var(--dim);font-size:16px;transition:transform .3s;}
-.cl:hover .cl-arr{transform:translateX(4px);color:var(--cyan);}
-
-/* ── FOOTER ── */
-footer{border-top:1px solid rgba(255,255,255,.04);padding:36px;text-align:center;position:relative;overflow:hidden;}
-footer::before{content:'BEZALEEL';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:clamp(60px,15vw,160px);font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.018);pointer-events:none;}
-.footer-t{font-size:10px;letter-spacing:3px;color:var(--dim);position:relative;}
-.footer-t span{color:var(--cyan);}
-
-/* LOADING SHIMMER */
-.shimmer{background:linear-gradient(90deg,rgba(255,255,255,.02) 25%,rgba(255,255,255,.06) 50%,rgba(255,255,255,.02) 75%);background-size:200% 100%;animation:sh 1.5s infinite;border-radius:4px;color:transparent!important;}
-@keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bezaleel Paul N — Software Developer, AI/ML Engineer & Builder. Portfolio with live GitHub analytics." />
+  <meta name="author" content="Bezaleel Paul N" />
+  <title>bezaleel@forge — Bezaleel Paul N</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>&#37;</text></svg>" />
 </head>
 <body>
+  <div class="noise"></div>
 
-<div id="cur"></div>
-<div id="cur-ring"></div>
-<canvas id="bgc"></canvas>
-
-<nav>
-  <div class="nav-id">BEZ://RESUME</div>
-  <div class="nav-links">
-    <a href="#about">ABOUT</a>
-    <a href="#resume">RESUME</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#stats">STATS</a>
-    <a href="#cp">CP</a>
-    <a href="#contact">CONTACT</a>
-  </div>
-  <div class="nav-status"><div class="pulse"></div>OPEN TO WORK</div>
-</nav>
-
-<div class="page">
-
-<!-- ══════════════════ HERO ══════════════════ -->
-<section class="hero" id="home">
-  <div class="hero-eyebrow">// RÉSUMÉ — INTERACTIVE EDITION</div>
-  <h1 class="hero-name">BEZALEEL<br/>PAUL N</h1>
-  <div class="hero-title">Software Developer · Builder · Creator</div>
-  <div class="typing-wrap"><span class="typer" id="typer"></span></div>
-  <p class="hero-tagline">
-    "I'm a builder-creator who codes what motivates me — on the spot. I enjoy the arts, contemplative thought, and multi-faceted, intellectually demanding, and imaginatively rigorous projects."
-  </p>
-  <div class="hero-btns">
-    <a href="#resume" class="btn btn-c"><span>VIEW RÉSUMÉ</span></a>
-    <a href="#projects" class="btn btn-p"><span>SEE PROJECTS</span></a>
-  </div>
-  <div class="scroll-hint"><div class="scroll-line"></div>SCROLL</div>
-</section>
-
-<div class="neon-divider"></div>
-
-<!-- ══════════════════ ABOUT ══════════════════ -->
-<section class="sec" id="about">
-  <div class="sec-hd reveal">
-    <span class="sec-num">01 /</span>
-    <h2 class="sec-title">About</h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="about-grid">
-    <div class="reveal">
-      <p class="about-p">Based in <em>Bangalore, India</em>. Open to new opportunities in software engineering, AI/ML, and creative development.</p>
-      <p class="about-p">I thrive at the intersection of <em>logic and creativity</em>—where clean code meets meaningful design. Whether it's a utility tool, a math visualizer, or an AI-powered app, I build things that actually solve problems.</p>
-      <p class="about-p">Beyond code, I'm drawn to <em>the arts, philosophy, and deep intellectual work</em>. My best projects come from the sweet spot between rigor and imagination.</p>
-      <div class="chips">
-        <span class="chip">📍 BANGALORE, IN</span>
-        <span class="chip">⚡ OPEN TO WORK</span>
-        <span class="chip">🎮 GODOT DEV</span>
-        <span class="chip">🧠 ML LEARNER</span>
-        <span class="chip">🏆 COMPETITIVE CODER</span>
-        <span class="chip">🎨 CREATIVE BUILDER</span>
-      </div>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">bezaleel@forge</a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#projects">projects</a>
+        <a href="#stats">stats</a>
+        <a href="#cp">cp</a>
+        <a href="#activity">activity</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <button class="nav-burger" id="nav-burger" aria-label="menu">[=]</button>
     </div>
-    <div class="reveal">
-      <div class="terminal">
-        <div class="t-bar"><div class="td r"></div><div class="td y"></div><div class="td g"></div><span class="t-ttl">~ bezaleel — bash</span></div>
-        <div class="t-body">
-          <div class="tl"><span class="tp">$ </span><span class="tc">whoami</span></div>
-          <div class="tl to"><span class="tv">BezForge</span> — Builder & Creator</div>
-          <br/>
-          <div class="tl"><span class="tp">$ </span><span class="tc">cat location.txt</span></div>
-          <div class="tl to"><span class="tv">Bangalore, India 🇮🇳</span></div>
-          <br/>
-          <div class="tl"><span class="tp">$ </span><span class="tc">echo $STATUS</span></div>
-          <div class="tl to"><span class="tv">Open to new opportunities ✓</span></div>
-          <br/>
-          <div class="tl"><span class="tp">$ </span><span class="tc">cat interests.json</span></div>
-          <div class="tl to">{ code: <span class="tv">"Python · JS · Dart"</span>,</div>
-          <div class="tl to">&nbsp;&nbsp;ai: <span class="tv">"TF · OpenAI · Kaggle"</span>,</div>
-          <div class="tl to">&nbsp;&nbsp;passion: <span class="tv">"Arts · Math · Philosophy"</span> }</div>
-          <br/>
-          <div class="tl"><span class="tp">$ </span><span class="tc">█</span></div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container">
+        <p class="hero-boot">[ SYSTEM BOOT COMPLETE ] <span id="hero-clock"></span></p>
+        <p class="hero-greeting" id="hero-greeting">GOOD EVENING, I'M</p>
+        <h1 class="hero-title">BEZALEEL PAUL N</h1>
+        <p class="hero-role">AI/ML <span class="dim">|</span> FULL-STACK <span class="dim">|</span> BUILDER</p>
+        <p class="hero-sub">
+          <span class="status-dot"></span> Open to opportunities &nbsp;·&nbsp; Bangalore, India
+        </p>
+        <div class="hero-type" id="hero-type">
+          <span class="prompt">$</span> <span id="typed"></span><span class="cursor">_</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">view projects</a>
+          <a class="btn btn-ghost" href="mailto:bezaleel321@gmail.com">contact me</a>
+        </div>
+        <div class="hero-stats" id="hero-stats">
+          <div class="hero-stat"><span class="hs-val" data-field="repos">--</span><span class="hs-label">repos</span></div>
+          <div class="hero-stat"><span class="hs-val" data-field="followers">--</span><span class="hs-label">followers</span></div>
+          <div class="hero-stat"><span class="hs-val" data-field="stars">--</span><span class="hs-label">stars</span></div>
+          <div class="hero-stat"><span class="hs-val" data-field="streak">--</span><span class="hs-label">day streak</span></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div class="neon-divider"></div>
-
-<!-- ══════════════════ RESUME ══════════════════ -->
-<section class="sec" id="resume">
-  <div class="sec-hd reveal">
-    <span class="sec-num">02 /</span>
-    <h2 class="sec-title">Résumé</h2>
-    <div class="sec-line"></div>
-  </div>
-
-  <div class="resume-layout">
-
-    <!-- LEFT: MAIN CONTENT -->
-    <div>
-
-      <!-- EDUCATION -->
-      <div style="margin-bottom:48px;">
-        <div class="sec-hd reveal" style="margin-bottom:28px;">
-          <h3 style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:3px;color:var(--cyan);">EDUCATION</h3>
-          <div class="sec-line"></div>
-        </div>
-        <div class="timeline reveal">
-          <div class="tl-item">
-            <div class="tl-date">2023 – Present</div>
-            <div class="tl-pipe"></div>
-            <div class="tl-content">
-              <div class="tl-role">B.E. / B.Tech — Computer Science</div>
-              <div class="tl-org">— Leave blank / add your college name —</div>
-              <div class="tl-desc">Focused on data structures, algorithms, software engineering, and machine learning. Active in competitive programming and hackathons.</div>
-              <div class="tl-tags">
-                <span class="tl-tag">DSA</span>
-                <span class="tl-tag">OS</span>
-                <span class="tl-tag">DBMS</span>
-                <span class="tl-tag">ML</span>
-                <span class="tl-tag">Software Engineering</span>
-              </div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="sec-title"><span class="sec-num">01 /</span> about</h2>
+        <div class="about-grid">
+          <div class="card about-text">
+            <p>Based in <span class="accent">Bangalore, India</span>. Open to opportunities in software engineering, AI/ML, and creative development.</p>
+            <p>I thrive at the intersection of logic and creativity — where clean code meets meaningful design. Whether it's a utility tool, a math visualizer, or an AI-powered app, I build things that actually solve problems.</p>
+            <p>Beyond code, I'm drawn to the arts, philosophy, and deep intellectual work. My best projects come from the sweet spot between rigor and imagination.</p>
+            <div class="tags" id="about-tags"></div>
+          </div>
+          <div class="card terminal">
+            <div class="term-bar">
+              <span class="term-dot red"></span><span class="term-dot yellow"></span><span class="term-dot green"></span>
+              <span class="term-title">~ bezaleel</span>
+            </div>
+            <div class="term-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="out"><span id="term-name">BezForge</span> — Builder &amp; Creator</p>
+              <p><span class="prompt">$</span> cat location.txt</p>
+              <p class="out">Bangalore, India</p>
+              <p><span class="prompt">$</span> echo $STATUS</p>
+              <p class="out">Open to new opportunities <span class="accent">✓</span></p>
+              <p><span class="prompt">$</span> cat interests.json</p>
+              <p class="out">{ code: "Python · JS · Dart",</p>
+              <p class="out indent">ai: "TF · OpenAI · Kaggle",</p>
+              <p class="out indent">passion: "Arts · Math · Philosophy" }</p>
+              <p><span class="prompt">$</span> <span class="cursor">_</span></p>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- EXPERIENCE -->
-      <div style="margin-bottom:48px;">
-        <div class="sec-hd reveal" style="margin-bottom:28px;">
-          <h3 style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:3px;color:var(--cyan);">EXPERIENCE</h3>
-          <div class="sec-line"></div>
-        </div>
-        <div class="timeline reveal">
-          <div class="tl-item">
-            <div class="tl-date"></div>
-            <div class="tl-pipe"></div>
-            <div class="tl-content">
-              <div class="tl-blank">— No formal experience yet. Add internships or freelance work here —</div>
-              <div class="tl-desc" style="margin-top:10px;">Self-driven project work and open source contributions demonstrate initiative and practical skill outside the classroom.</div>
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="sec-title"><span class="sec-num">02 /</span> skills</h2>
+        <div class="skills-grid" id="skills-grid"><!-- rendered --></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="sec-title"><span class="sec-num">03 /</span> projects</h2>
+        <div class="projects-grid" id="projects-grid"><!-- rendered --></div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section" id="stats">
+      <div class="container">
+        <h2 class="sec-title"><span class="sec-num">04 /</span> github stats</h2>
+        <div class="stats-grid" id="stats-grid"><!-- rendered --></div>
+        <div class="stats-bottom">
+          <div class="card chart-card">
+            <h3 class="card-title">// 30-DAY CONTRIBUTIONS</h3>
+            <div class="chart-wrap">
+              <svg id="chart" viewBox="0 0 700 220" preserveAspectRatio="none"></svg>
+            </div>
+            <div class="chart-legend">
+              <span>30d ago</span><span class="heatmap" id="heatmap"></span><span>today</span>
             </div>
           </div>
+          <div class="card top-repos-card">
+            <h3 class="card-title">// TOP REPOS</h3>
+            <ul class="top-repos" id="top-repos"><!-- rendered --></ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- ACHIEVEMENTS -->
-      <div style="margin-bottom:48px;">
-        <div class="sec-hd reveal" style="margin-bottom:28px;">
-          <h3 style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:3px;color:var(--cyan);">ACHIEVEMENTS & ACTIVITIES</h3>
-          <div class="sec-line"></div>
+    <!-- CP -->
+    <section class="section" id="cp">
+      <div class="container">
+        <h2 class="sec-title"><span class="sec-num">05 /</span> competitive programming</h2>
+        <div class="cp-grid" id="cp-grid"><!-- rendered --></div>
+        <div class="cp-platforms" id="cp-platforms"><!-- rendered --></div>
+      </div>
+    </section>
+
+    <!-- ACTIVITY -->
+    <section class="section" id="activity">
+      <div class="container">
+        <h2 class="sec-title"><span class="sec-num">06 /</span> recent activity</h2>
+        <div class="card activity-card">
+          <ul class="activity-list" id="activity-list"><!-- rendered --></ul>
+          <p class="feed-note">Live feed from GitHub events &nbsp;·&nbsp; updates every 6 hours</p>
         </div>
-        <div class="timeline reveal">
-          <div class="tl-item">
-            <div class="tl-date">Ongoing</div>
-            <div class="tl-pipe"></div>
-            <div class="tl-content">
-              <div class="tl-role">Competitive Programmer</div>
-              <div class="tl-org">Codeforces · LeetCode · CodeChef · HackerRank</div>
-              <div class="tl-desc">Actively solving algorithmic problems across platforms. Competing in rated contests to sharpen problem-solving under pressure.</div>
-              <div class="tl-tags"><span class="tl-tag">Algorithms</span><span class="tl-tag">Data Structures</span><span class="tl-tag">Problem Solving</span></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="sec-title"><span class="sec-num">07 /</span> connect</h2>
+        <div class="contact-grid">
+          <div class="card contact-intro">
+            <p>Open to collaboration, internships, and full-time opportunities. Whether it's a project idea, a role, or just a conversation about code — reach out.</p>
+            <div class="ping">
+              <p><span class="prompt">$</span> ping BezaleelPaul --verbose</p>
+              <p class="out">64 bytes: icmp_seq=1 ttl=64 time=~24h</p>
+              <p class="out">Status: <span class="accent">ONLINE</span> · Available for opportunities</p>
             </div>
+            <a class="btn btn-primary" href="mailto:bezaleel321@gmail.com">bezaleel321@gmail.com</a>
           </div>
-          <div class="tl-item">
-            <div class="tl-date">Ongoing</div>
-            <div class="tl-pipe"></div>
-            <div class="tl-content">
-              <div class="tl-role">Independent Projects</div>
-              <div class="tl-org">GitHub — github.com/BezaleelPaul</div>
-              <div class="tl-desc">Built and shipped multiple projects: a GUI file organizer, an electricity bill calculator with live tariff slabs, and an interactive Maclaurin series visualizer.</div>
-              <div class="tl-tags"><span class="tl-tag">Python</span><span class="tl-tag">JavaScript</span><span class="tl-tag">HTML/CSS</span></div>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-date"></div>
-            <div class="tl-pipe"></div>
-            <div class="tl-content">
-              <div class="tl-blank">— Add hackathons, awards, or certifications here —</div>
-            </div>
-          </div>
+          <div class="socials" id="socials"><!-- rendered --></div>
         </div>
       </div>
+    </section>
 
-    </div><!-- /LEFT -->
+  </main>
 
-    <!-- RIGHT: SIDEBAR -->
-    <div>
-
-      <!-- CONTACT INFO -->
-      <div class="side-section reveal">
-        <div class="side-title">Contact</div>
-        <div class="info-list">
-          <div class="info-row">
-            <span class="info-key">Location</span>
-            <span class="info-val">Bangalore, India</span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">Email</span>
-            <span class="info-val">— add email —</span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">LinkedIn</span>
-            <span class="info-val"><a href="https://www.linkedin.com/in/bezaleel-paul-7b114b307" target="_blank">bezaleel-paul</a></span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">GitHub</span>
-            <span class="info-val"><a href="https://github.com/BezaleelPaul" target="_blank">BezaleelPaul</a></span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">Portfolio</span>
-            <span class="info-val"><a href="https://bezaleelpaul.github.io/" target="_blank">bezaleelpaul.github.io</a></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- SKILLS -->
-      <div class="side-section reveal">
-        <div class="side-title">Skills</div>
-        <div class="skill-rows">
-          <div class="sk-row"><div class="sk-lbl"><span>Python</span><span>90%</span></div><div class="sk-track"><div class="sk-fill sf1" data-w="90"></div></div></div>
-          <div class="sk-row"><div class="sk-lbl"><span>JavaScript / TS</span><span>82%</span></div><div class="sk-track"><div class="sk-fill sf2" data-w="82"></div></div></div>
-          <div class="sk-row"><div class="sk-lbl"><span>React / Node.js</span><span>75%</span></div><div class="sk-track"><div class="sk-fill sf3" data-w="75"></div></div></div>
-          <div class="sk-row"><div class="sk-lbl"><span>Flutter / Dart</span><span>68%</span></div><div class="sk-track"><div class="sk-fill sf4" data-w="68"></div></div></div>
-          <div class="sk-row"><div class="sk-lbl"><span>TensorFlow / ML</span><span>60%</span></div><div class="sk-track"><div class="sk-fill sf5" data-w="60"></div></div></div>
-          <div class="sk-row"><div class="sk-lbl"><span>HTML / CSS</span><span>88%</span></div><div class="sk-track"><div class="sk-fill sf1" data-w="88"></div></div></div>
-        </div>
-      </div>
-
-      <!-- TOOLS -->
-      <div class="side-section reveal">
-        <div class="side-title">Tools & Platforms</div>
-        <div class="tools-grid">
-          <span class="tool-tag">Git</span>
-          <span class="tool-tag">Firebase</span>
-          <span class="tool-tag">SQLite</span>
-          <span class="tool-tag">FastAPI</span>
-          <span class="tool-tag">Godot</span>
-          <span class="tool-tag">Kaggle</span>
-          <span class="tool-tag">OpenAI API</span>
-          <span class="tool-tag">GitHub Pages</span>
-          <span class="tool-tag">VSCode</span>
-          <span class="tool-tag">Linux / Bash</span>
-        </div>
-      </div>
-
-      <!-- LANGUAGES -->
-      <div class="side-section reveal">
-        <div class="side-title">Languages</div>
-        <div class="lang-list">
-          <div class="lang-row">
-            <span class="lang-name">English</span>
-            <div class="lang-dots">
-              <div class="lang-dot on"></div><div class="lang-dot on"></div><div class="lang-dot on"></div><div class="lang-dot on"></div><div class="lang-dot on"></div>
-            </div>
-          </div>
-          <div class="lang-row">
-            <span class="lang-name">— add other —</span>
-            <div class="lang-dots">
-              <div class="lang-dot on"></div><div class="lang-dot on"></div><div class="lang-dot on"></div><div class="lang-dot"></div><div class="lang-dot"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- INTERESTS -->
-      <div class="side-section reveal">
-        <div class="side-title">Interests</div>
-        <div class="tools-grid">
-          <span class="chip" style="font-size:9px;">The Arts</span>
-          <span class="chip" style="font-size:9px;">Philosophy</span>
-          <span class="chip" style="font-size:9px;">Mathematics</span>
-          <span class="chip" style="font-size:9px;">Game Dev</span>
-          <span class="chip" style="font-size:9px;">AI/ML</span>
-          <span class="chip" style="font-size:9px;">Open Source</span>
-        </div>
-      </div>
-
-    </div><!-- /SIDEBAR -->
-
-  </div><!-- /resume-layout -->
-</section>
-
-<div class="neon-divider"></div>
-
-<!-- ══════════════════ PROJECTS ══════════════════ -->
-<section class="sec" id="projects">
-  <div class="sec-hd reveal">
-    <span class="sec-num">03 /</span>
-    <h2 class="sec-title">Projects</h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="proj-grid">
-
-    <div class="proj-card reveal">
-      <div class="proj-hd">
-        <div class="proj-ico">📂</div>
-        <div class="proj-name">FILE ORGANIZER</div>
-        <div class="proj-line">Smart GUI file sorting tool</div>
-      </div>
-      <div class="proj-bd">
-        <p class="proj-desc">Automatically organizes files by extension with user-defined rules. Toggle between copy/move, dark-themed modern interface.</p>
-        <ul class="proj-ul">
-          <li>Copy or move files with a single toggle</li>
-          <li>Add custom extensions through the GUI</li>
-          <li>Dark theme with clean UX</li>
-        </ul>
-        <div class="proj-stack"><span class="sp">Python</span><span class="sp">Tkinter</span></div>
-        <div class="proj-links">
-          <a href="https://github.com/BezaleelPaul/File-Organizer" target="_blank" class="pl gh">⌥ GitHub</a>
-        </div>
-      </div>
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <span class="accent">BEZALEEL PAUL N</span> — Bangalore, India</p>
+      <p class="foot-meta">HTML · CSS · VANILLA JS · BUILT WITH INTENTION</p>
+      <p class="foot-meta" id="last-updated"></p>
     </div>
+  </footer>
 
-    <div class="proj-card reveal">
-      <div class="proj-hd">
-        <div class="proj-ico">⚡</div>
-        <div class="proj-name">BESCOM CALCULATOR</div>
-        <div class="proj-line">Electricity bill calculator</div>
-      </div>
-      <div class="proj-bd">
-        <p class="proj-desc">Accurate Karnataka BESCOM tariff slab electricity bill calculator with interactive UI. Live on GitHub Pages.</p>
-        <ul class="proj-ul">
-          <li>Accurate monthly bill calculation</li>
-          <li>User-friendly interactive interface</li>
-          <li>Deployed — zero setup needed</li>
-        </ul>
-        <div class="proj-stack"><span class="sp">HTML</span><span class="sp">CSS</span><span class="sp">JavaScript</span></div>
-        <div class="proj-links">
-          <a href="https://bezaleelpaul.github.io/BESCOM-Calculator/" target="_blank" class="pl live">↗ Live Demo</a>
-          <a href="https://github.com/BezaleelPaul/BESCOM-Calculator" target="_blank" class="pl gh">⌥ GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <div class="proj-hd">
-        <div class="proj-ico">📈</div>
-        <div class="proj-name">MACLAURIN VISUALIZER</div>
-        <div class="proj-line">Interactive math learning tool</div>
-      </div>
-      <div class="proj-bd">
-        <p class="proj-desc">Real-time visualization of Maclaurin series convergence. Slider controls for degree and function selection, Canvas-rendered.</p>
-        <ul class="proj-ul">
-          <li>Real-time partial sum visualization</li>
-          <li>Slider controls for degree & function</li>
-          <li>Ideal for teaching calculus concepts</li>
-        </ul>
-        <div class="proj-stack"><span class="sp">JavaScript</span><span class="sp">HTML</span><span class="sp">Canvas API</span></div>
-        <div class="proj-links">
-          <a href="https://github.com/BezaleelPaul/Maclaurin-Visualizer" target="_blank" class="pl gh">⌥ GitHub</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="neon-divider"></div>
-
-<!-- ══════════════════ GITHUB STATS ══════════════════ -->
-<section class="sec" id="stats">
-  <div class="sec-hd reveal">
-    <span class="sec-num">04 /</span>
-    <h2 class="sec-title">GitHub Stats</h2>
-    <div class="sec-line"></div>
-  </div>
-
-  <div class="gh-embed reveal">
-    <div class="gh-row">
-      <img src="https://github-readme-stats.vercel.app/api?username=BezaleelPaul&theme=tokyonight&show_icons=true&hide_border=true&count_private=true&rank_icon=github" alt="GitHub Stats" onerror="this.style.display='none'"/>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BezaleelPaul&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" alt="Languages" onerror="this.style.display='none'"/>
-    </div>
-    <img src="https://streak-stats.demolab.com/?user=BezaleelPaul&theme=tokyonight&hide_border=true&border_radius=6" alt="Streak" style="max-width:560px;width:100%;" onerror="this.style.display='none'"/>
-  </div>
-
-  <div style="margin-top:36px;" class="reveal">
-    <div class="gh-embed" style="padding:0;overflow:hidden;">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=BezaleelPaul&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=38bdae&area=true&hide_border=true" alt="Activity" style="width:100%;display:block;" onerror="this.style.display='none'"/>
-    </div>
-  </div>
-
-  <div style="margin-top:36px;" class="reveal">
-    <div class="gh-embed">
-      <img src="https://github-profile-trophy.vercel.app/?username=BezaleelPaul&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7&margin-w=8" alt="Trophies" style="max-width:100%;" onerror="this.style.display='none'"/>
-    </div>
-  </div>
-</section>
-
-<div class="neon-divider"></div>
-
-<!-- ══════════════════ COMPETITIVE PROGRAMMING ══════════════════ -->
-<section class="sec" id="cp">
-  <div class="sec-hd reveal">
-    <span class="sec-num">05 /</span>
-    <h2 class="sec-title">Competitive Programming</h2>
-    <div class="sec-line"></div>
-  </div>
-
-  <!-- LIVE CF STATS VIA DIRECT API -->
-  <div class="cp-grid reveal" id="cp-cards">
-    <a href="https://codeforces.com/profile/BezaleelPaulN" target="_blank" class="cp-card cf">
-      <div class="cp-plat">Codeforces</div>
-      <div class="cp-handle">BezaleelPaulN</div>
-      <div class="cp-stat" id="cf-rating" style="color:#1F8ACB;">Loading...</div>
-      <div style="font-size:9px;color:var(--dim);margin-top:4px;" id="cf-rank">fetching rank...</div>
-    </a>
-    <a href="https://leetcode.com/LavaElixir" target="_blank" class="cp-card lc">
-      <div class="cp-plat">LeetCode</div>
-      <div class="cp-handle">LavaElixir</div>
-      <div class="cp-stat" id="lc-solved" style="color:#FFA116;">—</div>
-      <div style="font-size:9px;color:var(--dim);margin-top:4px;">problems solved</div>
-    </a>
-    <a href="https://www.codechef.com/users/bezaleelpauln" target="_blank" class="cp-card cc">
-      <div class="cp-plat">CodeChef</div>
-      <div class="cp-handle">bezaleelpauln</div>
-      <div class="cp-stat" style="color:#9b7960;">—</div>
-      <div style="font-size:9px;color:var(--dim);margin-top:4px;">visit profile</div>
-    </a>
-    <a href="https://www.hackerrank.com/bezaleel321" target="_blank" class="cp-card hr">
-      <div class="cp-plat">HackerRank</div>
-      <div class="cp-handle">bezaleel321</div>
-      <div class="cp-stat" style="color:#2EC866;">—</div>
-      <div style="font-size:9px;color:var(--dim);margin-top:4px;">visit profile</div>
-    </a>
-    <a href="https://www.kaggle.com/bezaleelpaul" target="_blank" class="cp-card kg">
-      <div class="cp-plat">Kaggle</div>
-      <div class="cp-handle">bezaleelpaul</div>
-      <div class="cp-stat" style="color:#20BEFF;">—</div>
-      <div style="font-size:9px;color:var(--dim);margin-top:4px;">visit profile</div>
-    </a>
-  </div>
-
-  <!-- LEETCODE CARD -->
-  <div class="gh-embed reveal" style="margin-top:24px;">
-    <div style="font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;color:var(--dim);margin-bottom:18px;">LEETCODE HEATMAP</div>
-    <img src="https://leetcard.jacoblin.cool/LavaElixir?theme=dark&ext=heatmap&border=0&radius=10" alt="LeetCode" style="max-width:480px;width:100%;border-radius:8px;" onerror="this.style.display='none'"/>
-  </div>
-
-  <!-- CF STATS TABLE (populated by JS) -->
-  <div class="gh-embed reveal" style="margin-top:24px;" id="cf-stats-box">
-    <div style="font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;color:var(--dim);margin-bottom:18px;">CODEFORCES LIVE STATS</div>
-    <div id="cf-detail" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;">
-      <div class="stat-box"><div class="stat-n shimmer" id="cf-s-rating">—</div><div class="stat-l">Rating</div></div>
-      <div class="stat-box"><div class="stat-n shimmer" id="cf-s-maxrating">—</div><div class="stat-l">Max Rating</div></div>
-      <div class="stat-box"><div class="stat-n shimmer" id="cf-s-rank">—</div><div class="stat-l">Current Rank</div></div>
-      <div class="stat-box"><div class="stat-n shimmer" id="cf-s-maxrank">—</div><div class="stat-l">Max Rank</div></div>
-      <div class="stat-box"><div class="stat-n shimmer" id="cf-s-contrib">—</div><div class="stat-l">Contribution</div></div>
-      <div class="stat-box"><div class="stat-n shimmer" id="cf-s-friends">—</div><div class="stat-l">Friends</div></div>
-    </div>
-  </div>
-
-</section>
-
-<div class="neon-divider"></div>
-
-<!-- ══════════════════ CONTACT ══════════════════ -->
-<section class="sec" id="contact">
-  <div class="sec-hd reveal">
-    <span class="sec-num">06 /</span>
-    <h2 class="sec-title">Connect</h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="contact-grid">
-    <div class="reveal">
-      <p class="about-p">Open to collaboration, internships, and full-time opportunities. Whether it's a project idea, a role, or just a conversation about code — reach out.</p>
-      <div class="terminal" style="margin-top:24px;font-size:11px;">
-        <div class="t-bar"><div class="td r"></div><div class="td y"></div><div class="td g"></div><span class="t-ttl">ping_bezaleel.sh</span></div>
-        <div class="t-body">
-          <div class="tl"><span class="tp">$ </span><span class="tc">ping BezaleelPaul --verbose</span></div>
-          <div class="tl to">64 bytes: icmp_seq=1 ttl=64 <span class="tv">time=~24h</span></div>
-          <div class="tl to">Status: <span class="tv">ONLINE · Available for opportunities</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="contact-links reveal">
-      <a href="https://www.linkedin.com/in/bezaleel-paul-7b114b307" target="_blank" class="cl">
-        <span class="cl-ico">💼</span>
-        <div><span class="cl-plat">LinkedIn</span><span class="cl-handle">bezaleel-paul-7b114b307</span></div>
-        <span class="cl-arr">→</span>
-      </a>
-      <a href="https://bezaleelpaul.github.io/" target="_blank" class="cl">
-        <span class="cl-ico">🌐</span>
-        <div><span class="cl-plat">Portfolio</span><span class="cl-handle">bezaleelpaul.github.io</span></div>
-        <span class="cl-arr">→</span>
-      </a>
-      <a href="https://github.com/BezaleelPaul" target="_blank" class="cl">
-        <span class="cl-ico">⌥</span>
-        <div><span class="cl-plat">GitHub</span><span class="cl-handle">@BezaleelPaul</span></div>
-        <span class="cl-arr">→</span>
-      </a>
-      <a href="https://www.kaggle.com/bezaleelpaul" target="_blank" class="cl">
-        <span class="cl-ico">🧠</span>
-        <div><span class="cl-plat">Kaggle</span><span class="cl-handle">bezaleelpaul</span></div>
-        <span class="cl-arr">→</span>
-      </a>
-      <a href="https://codeforces.com/profile/BezaleelPaulN" target="_blank" class="cl">
-        <span class="cl-ico">🏆</span>
-        <div><span class="cl-plat">Codeforces</span><span class="cl-handle">BezaleelPaulN</span></div>
-        <span class="cl-arr">→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p class="footer-t">
-    Designed & built by <span>BEZALEEL PAUL N</span> — Bangalore, India<br/>
-    <span style="font-size:9px;opacity:.4;margin-top:8px;display:block;letter-spacing:4px;">HTML · CSS · VANILLA JS · BUILT WITH INTENTION</span>
-  </p>
-</footer>
-
-</div><!-- /page -->
-
-<script>
-/* ──────────────────── CURSOR ──────────────────── */
-const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function animRing(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
-document.querySelectorAll('a,button,.proj-card,.cp-card,.stat-box,.chip,.tool-tag').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';cur.style.background='var(--pink)';ring.style.width='46px';ring.style.height='46px';ring.style.borderColor='var(--pink)';});
-  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';cur.style.background='var(--cyan)';ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='var(--cyan)';});
-});
-
-/* ──────────────────── CANVAS PARTICLES ──────────────────── */
-const cv=document.getElementById('bgc'),cx=cv.getContext('2d');
-function resizeCv(){cv.width=window.innerWidth;cv.height=window.innerHeight;}
-resizeCv();window.addEventListener('resize',resizeCv);
-const COLS=['#ff008033','#00ffff22','#8b00ff22','#00ff8818'];
-const pts=Array.from({length:80},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,sz:Math.random()*1.4+.4,col:COLS[0|Math.random()*COLS.length]}));
-let mp={x:-999,y:-999};
-document.addEventListener('mousemove',e=>{mp.x=e.clientX;mp.y=e.clientY;});
-function drawCv(){
-  cx.clearRect(0,0,cv.width,cv.height);
-  // grid
-  cx.strokeStyle='rgba(0,255,255,.018)';cx.lineWidth=.5;
-  for(let x=0;x<cv.width;x+=60){cx.beginPath();cx.moveTo(x,0);cx.lineTo(x,cv.height);cx.stroke();}
-  for(let y=0;y<cv.height;y+=60){cx.beginPath();cx.moveTo(0,y);cx.lineTo(cv.width,y);cx.stroke();}
-  // particles
-  pts.forEach(p=>{
-    const dx=mp.x-p.x,dy=mp.y-p.y,d=Math.sqrt(dx*dx+dy*dy);
-    if(d<110){p.vx-=dx/d*.025;p.vy-=dy/d*.025;}
-    p.vx*=.99;p.vy*=.99;p.x+=p.vx;p.y+=p.vy;
-    if(p.x<0)p.x=cv.width;if(p.x>cv.width)p.x=0;
-    if(p.y<0)p.y=cv.height;if(p.y>cv.height)p.y=0;
-    cx.beginPath();cx.arc(p.x,p.y,p.sz,0,Math.PI*2);cx.fillStyle=p.col;cx.fill();
-  });
-  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
-    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-    if(d<90){cx.strokeStyle=`rgba(0,255,255,${.07*(1-d/90)})`;cx.lineWidth=.5;cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.stroke();}
-  }
-  requestAnimationFrame(drawCv);
-}
-drawCv();
-
-/* ──────────────────── TYPING ──────────────────── */
-const phrases=['> Python Developer','> JavaScript Engineer','> ML Enthusiast','> Competitive Coder','> Creative Builder','> Godot Game Dev','> Open to Opportunities'];
-let pi=0,ci=0,del=false;
-const typer=document.getElementById('typer');
-function typeLoop(){
-  const ph=phrases[pi];
-  if(!del){typer.textContent=ph.slice(0,++ci);if(ci===ph.length){del=true;return setTimeout(typeLoop,1900);}}
-  else{typer.textContent=ph.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
-  setTimeout(typeLoop,del?45:75);
-}
-typeLoop();
-
-/* ──────────────────── SCROLL REVEAL ──────────────────── */
-const rvls=document.querySelectorAll('.reveal');
-const ro=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ro.unobserve(e.target);}});
-},{threshold:.08});
-rvls.forEach(el=>ro.observe(el));
-
-/* ──────────────────── SKILL BARS ──────────────────── */
-document.querySelectorAll('.sk-fill').forEach(f=>{
-  new IntersectionObserver(([e])=>{if(e.isIntersecting){f.style.width=f.dataset.w+'%';}},{threshold:.3}).observe(f);
-});
-
-/* ──────────────────── CLICK RIPPLE ──────────────────── */
-const rs=document.createElement('style');
-rs.textContent='@keyframes rp{to{width:70px;height:70px;opacity:0;border-color:rgba(0,255,255,0);}}';
-document.head.appendChild(rs);
-document.addEventListener('click',e=>{
-  const d=document.createElement('div');
-  d.style.cssText=`position:fixed;left:${e.clientX}px;top:${e.clientY}px;width:0;height:0;border:1px solid rgba(0,255,255,.6);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9995;animation:rp .55s ease-out forwards;`;
-  document.body.appendChild(d);setTimeout(()=>d.remove(),600);
-});
-
-/* ──────────────────── ACTIVE NAV ──────────────────── */
-const secs=document.querySelectorAll('section[id]'),nls=document.querySelectorAll('.nav-links a');
-new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){nls.forEach(a=>a.classList.remove('active'));const l=document.querySelector(`.nav-links a[href="#${e.target.id}"]`);if(l)l.classList.add('active');}});
-},{rootMargin:'-40% 0px -55% 0px'}).observe;
-secs.forEach(s=>new IntersectionObserver(([e])=>{if(e.isIntersecting){nls.forEach(a=>a.classList.remove('active'));const l=document.querySelector(`.nav-links a[href="#${s.id}"]`);if(l)l.classList.add('active');}},{rootMargin:'-40% 0px -55% 0px'}).observe(s));
-
-/* ──────────────────── CODEFORCES LIVE API ──────────────────── */
-async function loadCFStats(){
-  try{
-    const res=await fetch('https://codeforces.com/api/user.info?handles=BezaleelPaulN');
-    if(!res.ok)throw new Error('CF API error');
-    const data=await res.json();
-    if(data.status!=='OK')throw new Error('CF API bad status');
-    const u=data.result[0];
-    // Hero card
-    const ratingEl=document.getElementById('cf-rating');
-    const rankEl=document.getElementById('cf-rank');
-    if(ratingEl){ratingEl.textContent=u.rating??'Unrated';ratingEl.classList.remove('shimmer');}
-    if(rankEl){rankEl.textContent=u.rank??'—';rankEl.classList.remove('shimmer');}
-    // Detail boxes
-    const set=(id,val)=>{const el=document.getElementById(id);if(el){el.textContent=val??'—';el.classList.remove('shimmer');}};
-    set('cf-s-rating',u.rating??'Unrated');
-    set('cf-s-maxrating',u.maxRating??'—');
-    set('cf-s-rank',u.rank??'—');
-    set('cf-s-maxrank',u.maxRank??'—');
-    set('cf-s-contrib',u.contribution??0);
-    set('cf-s-friends',u.friendOfCount??'—');
-  } catch(err){
-    console.warn('CF API failed:',err);
-    ['cf-rating','cf-s-rating','cf-s-maxrating','cf-s-rank','cf-s-maxrank','cf-s-contrib','cf-s-friends'].forEach(id=>{
-      const el=document.getElementById(id);if(el){el.textContent='—';el.classList.remove('shimmer');}
-    });
-    const rankEl=document.getElementById('cf-rank');if(rankEl)rankEl.textContent='visit profile';
-  }
-}
-
-/* ──────────────────── LEETCODE VIA PROXY ──────────────────── */
-async function loadLCStats(){
-  try{
-    // Using public LeetCode API proxy
-    const res=await fetch('https://leetcode-stats-api.herokuapp.com/LavaElixir');
-    if(!res.ok)throw new Error();
-    const d=await res.json();
-    const el=document.getElementById('lc-solved');
-    if(el&&d.totalSolved!==undefined){el.textContent=d.totalSolved;el.classList.remove('shimmer');}
-  }catch{
-    // try alternate
-    try{
-      const r2=await fetch('https://alfa-leetcode-api.onrender.com/LavaElixir/solved');
-      const d2=await r2.json();
-      const el=document.getElementById('lc-solved');
-      if(el&&d2.solvedProblem!==undefined){el.textContent=d2.solvedProblem;el.classList.remove('shimmer');}
-    }catch{/* silent */}
-  }
-}
-
-loadCFStats();
-loadLCStats();
-</script>
+  <script src="js/app.js"></script>
 </body>
 </html>
