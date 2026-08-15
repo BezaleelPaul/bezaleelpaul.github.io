@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-15T13:04:47Z",
+  "generated_at": "2026-08-15T15:50:12Z",
   "profile": {
     "name": "Bezaleel Paul N",
     "alias": "BezForge",
     "location": "Bangalore, India",
     "role": "AI/ML · Full-Stack · Builder",
-    "status": "last pushed to file_organizer_flutter 2h ago",
+    "status": "last pushed to BezaleelPaul 0m ago",
     "open_to_work": true,
     "focus": [
       "AI/ML",
@@ -39,10 +39,10 @@
     ]
   },
   "dashboard": {
-    "total_30d": 23,
+    "total_30d": 27,
     "streak": 2,
-    "today": 1,
-    "avg_per_day": 0.8,
+    "today": 5,
+    "avg_per_day": 0.9,
     "best_day": 12,
     "best_day_date": "2026-07-31",
     "series": [
@@ -164,7 +164,7 @@
       },
       {
         "date": "2026-08-15",
-        "count": 1
+        "count": 5
       }
     ]
   },
@@ -172,68 +172,68 @@
     {
       "emoji": "📦",
       "action": "Pushed 0 commit to",
-      "repo": "file_organizer_flutter",
-      "time": "2h ago"
-    },
-    {
-      "emoji": "📦",
-      "action": "Pushed 0 commit to",
-      "repo": "file_organizer_flutter",
-      "time": "22h ago"
-    },
-    {
-      "emoji": "📦",
-      "action": "Pushed 0 commit to",
-      "repo": "file_organizer_flutter",
-      "time": "22h ago"
-    },
-    {
-      "emoji": "📦",
-      "action": "Pushed 0 commit to",
-      "repo": "file_organizer_flutter",
-      "time": "22h ago"
-    },
-    {
-      "emoji": "📦",
-      "action": "Pushed 0 commit to",
-      "repo": "file_organizer_flutter",
-      "time": "22h ago"
-    },
-    {
-      "emoji": "🌿",
-      "action": "Created branch",
-      "repo": "file_organizer_flutter",
-      "time": "22h ago"
-    },
-    {
-      "emoji": "🌿",
-      "action": "Created branch",
-      "repo": "file_organizer_flutter",
-      "time": "22h ago"
+      "repo": "BezaleelPaul",
+      "time": "0m ago"
     },
     {
       "emoji": "📦",
       "action": "Pushed 0 commit to",
       "repo": "BezaleelPaul",
+      "time": "3m ago"
+    },
+    {
+      "emoji": "📦",
+      "action": "Pushed 0 commit to",
+      "repo": "BezaleelPaul",
+      "time": "13m ago"
+    },
+    {
+      "emoji": "📦",
+      "action": "Pushed 0 commit to",
+      "repo": "BezaleelPaul",
+      "time": "26m ago"
+    },
+    {
+      "emoji": "📦",
+      "action": "Pushed 0 commit to",
+      "repo": "file_organizer_flutter",
+      "time": "5h ago"
+    },
+    {
+      "emoji": "📦",
+      "action": "Pushed 0 commit to",
+      "repo": "file_organizer_flutter",
       "time": "1d ago"
     },
     {
       "emoji": "📦",
       "action": "Pushed 0 commit to",
-      "repo": "BezaleelPaul",
-      "time": "6d ago"
+      "repo": "file_organizer_flutter",
+      "time": "1d ago"
     },
     {
       "emoji": "📦",
       "action": "Pushed 0 commit to",
-      "repo": "bezaleelpaul.github.io",
-      "time": "6d ago"
+      "repo": "file_organizer_flutter",
+      "time": "1d ago"
+    },
+    {
+      "emoji": "📦",
+      "action": "Pushed 0 commit to",
+      "repo": "file_organizer_flutter",
+      "time": "1d ago"
+    },
+    {
+      "emoji": "🌿",
+      "action": "Created branch",
+      "repo": "file_organizer_flutter",
+      "time": "1d ago"
     }
   ],
   "skills": [
     {
       "category": "LANGUAGES",
-      "icon": "&lt;/&gt;",
+      "icon": "</>",
       "items": [
         {
           "name": "Python",
@@ -361,12 +361,12 @@
       "color": "#8b949e"
     },
     "leetcode": {
-      "username": "LavaElixir",
-      "totalSolved": 42,
-      "easy": 20,
-      "medium": 18,
-      "hard": 4,
-      "ranking": 500000
+      "username": "BezaleelPaulN",
+      "totalSolved": 188,
+      "easy": 78,
+      "medium": 14,
+      "hard": 2,
+      "ranking": 1750449
     }
   },
   "projects": [
@@ -471,8 +471,8 @@
     },
     {
       "name": "LeetCode",
-      "handle": "LavaElixir",
-      "url": "https://leetcode.com/LavaElixir",
+      "handle": "BezaleelPaulN",
+      "url": "https://leetcode.com/u/BezaleelPaulN/",
       "icon": "lc"
     },
     {
