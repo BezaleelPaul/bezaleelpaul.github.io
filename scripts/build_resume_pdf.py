@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build the one-page PDF résumé and matching project-archive QR from resume.json."""
+import base64
 import json
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -151,5 +152,15 @@ layout.setStyle(TableStyle([
 doc = SimpleDocTemplate(str(PUBLIC / "resume.pdf"), pagesize=A4,
                         leftMargin=8*mm, rightMargin=8*mm, topMargin=6*mm, bottomMargin=6*mm,
                         title=DATA["name"] + " — Resume", author=DATA["name"])
+pdf_path = PUBLIC / "resume.pdf"
+doc = SimpleDocTemplate(str(pdf_path), pagesize=A4,
+                        leftMargin=8*mm, rightMargin=8*mm, topMargin=6*mm, bottomMargin=6*mm,
+                        title=DATA["name"] + " — Resume", author=DATA["name"])
 doc.build([layout, Spacer(1, 2), P("BEZALEEL PAUL N  •  APPLIED AI & SOFTWARE ENGINEERING  •  NOVEMBER 2026", "Footer")])
-print("Generated public/resume.pdf and public/project-archive-qr.svg")
+pdf_b64 = base64.b64encode(pdf_path.read_bytes()).decode("ascii")
+(ROOT / "src/data/resumePdf.ts").write_text(
+    "// Generated from src/data/resume.json; do not edit manually.\\n"
+    + "export const resumePdfBase64 = " + json.dumps(pdf_b64) + ";\\n",
+    encoding="utf-8"
+)
+print("Generated public/resume.pdf, src/data/resumePdf.ts and public/project-archive-qr.svg")
