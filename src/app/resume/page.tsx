@@ -204,8 +204,8 @@ export default function ResumePage() {
               {/* ── Left Aside: Pilot Credentials & Telemetry ── */}
               <aside className="resume-dossier-aside flex flex-col gap-6 text-[10px] leading-relaxed">
                 {/* Profile Card */}
-                <div className="flex items-center gap-4 border-b border-[var(--line)] pb-5">
-                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-md border border-[var(--accent)] bg-[var(--surface-raised)] shadow-[0_0_15px_rgba(215,255,0,0.15)]">
+                <div className="flex items-center gap-5 border-b border-[var(--line)] pb-5">
+                  <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-md border border-[var(--accent)] bg-[var(--surface-raised)] shadow-[0_0_15px_rgba(215,255,0,0.15)]">
                     <img
                       src="/assets/portrait-processed.webp"
                       alt={data.name}
