@@ -29,7 +29,7 @@
     ],
     [
       "Portfolio",
-      "bezaleelpaul.github.io"
+      "https://bezaleel-paul-portfolio.vercel.app/"
     ],
     [
       "GitHub",
@@ -133,7 +133,7 @@
   "summary": "Second-year Computer Science undergraduate at CMR University and IIT Madras BS Data Science student, interested in applied AI and software engineering. Building practical projects across machine learning, explainability, mobile applications, and interactive web systems. Seeking a software engineering internship to contribute to real products while strengthening engineering fundamentals.",
   "experience": [
     {
-      "role": "EXCOM Member & Webmaster",
+      "role": "Former EXCOM Member & Webmaster",
       "org": "IEEE CMR University Student Branch",
       "place": "CMR University, Bengaluru, India",
       "bullets": [
@@ -143,12 +143,58 @@
       ]
     }
   ],
-  "projects": [],
+  "projects": [
+    {
+      "name": "Drishti-AI — Explainable Retinal Screening",
+      "tech": "Python · TensorFlow · Flutter · Computer Vision · Explainable AI",
+      "links": [
+        "https://github.com/BezaleelPaul/Drishti-AI"
+      ],
+      "bullets": [
+        "SIH software prototype exploring explainable diabetic-retinopathy screening and clinician-in-the-loop workflows.",
+        "Focus on image-quality assessment, model evidence, and responsible evaluation."
+      ]
+    },
+    {
+      "name": "Orbital Observatory — 3D Keplerian Engine",
+      "tech": "Next.js · TypeScript · React Three Fiber · Three.js",
+      "links": [
+        "https://github.com/BezaleelPaul/Orbital-Observatory",
+        "/observatory/"
+      ],
+      "bullets": [
+        "Interactive planetarium with Keplerian orbital mechanics and procedural planetary data.",
+        "Includes multiple camera modes and optional NASA open-data context."
+      ]
+    },
+    {
+      "name": "Mise — File Organizer & Disk Intelligence",
+      "tech": "Flutter · Dart · Python · Cross-platform",
+      "links": [
+        "https://github.com/BezaleelPaul/file_organizer_flutter"
+      ],
+      "bullets": [
+        "Cross-platform file-organization and disk-intelligence project.",
+        "Explores selective undo, duplicate analysis, and safer file workflows."
+      ]
+    },
+    {
+      "name": "NADICARE Twin Engine",
+      "tech": "Python · XGBoost · Streamlit · Plotly",
+      "links": [
+        "https://github.com/BezaleelPaul/bnmit-nadicare-health"
+      ],
+      "bullets": [
+        "Healthcare-focused digital-twin prototype for physiological response and recovery modeling.",
+        "Uses predictive modeling and interactive telemetry visualizations."
+      ]
+    }
+  ],
   "projectsQR": {
-    "url": "https://bezaleelpaul.github.io/projects/",
-    "label": "Scan to view all my projects",
-    "display": "bezaleelpaul.github.io/projects",
-    "note": "Selected applied-AI, software engineering, Flutter, and web projects with source code and available demos"
+    "url": "/projects/",
+    "label": "Explore the project archive",
+    "display": "bezaleel-paul-portfolio.vercel.app/projects/",
+    "note": "Current portfolio project archive with source repositories and available demonstrations."
   },
   "footer": "Open to Software Engineering / Applied AI Internships",
   "extra": []
