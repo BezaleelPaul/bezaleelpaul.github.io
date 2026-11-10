@@ -435,7 +435,7 @@ export default function ResumePage() {
                         <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                           {project.links.map((url) => (
                             <a key={url} href={url} target={url.startsWith('http') ? '_blank' : undefined} rel={url.startsWith('http') ? 'noopener noreferrer' : undefined} className="font-mono text-[8px] font-semibold uppercase tracking-[0.1em] text-[var(--text)] underline decoration-[var(--accent)] underline-offset-4 hover:text-[var(--accent)]">
-                              {url.includes('github.com') ? 'Source repository ↗' : 'Live project ↗'}
+                              {url.includes('/releases/') ? 'Latest releases ↗' : url.includes('github.com') ? 'Source repository ↗' : 'Live project ↗'}
                             </a>
                           ))}
                         </div>
@@ -512,7 +512,7 @@ export default function ResumePage() {
                     className="group flex flex-col sm:flex-row items-center gap-5 rounded border border-[var(--line)] bg-[rgba(10,10,15,0.6)] p-4 transition-all hover:border-[var(--accent)] hover:bg-[rgba(16,16,22,0.8)]"
                   >
                     <div className="shrink-0 rounded bg-white p-2.5 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                      <FolderGit2 className="h-12 w-12 text-black" />
+                      <img src="/project-archive-qr.svg" alt="QR code linking to the current project archive" className="h-20 w-20 object-contain" />
                     </div>
                     <div className="flex-1 text-center sm:text-left">
                       <div className="flex items-center justify-center sm:justify-start gap-2">
