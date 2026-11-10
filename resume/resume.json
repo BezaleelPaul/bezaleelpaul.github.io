@@ -194,8 +194,7 @@
       "tech": "Flutter · Dart · Python · Cross-platform",
       "links": [
         "/projects/#file-organizer-ecosystem",
-        "https://github.com/BezaleelPaul/file_organizer_flutter",
-        "https://github.com/BezaleelPaul/file_organizer_flutter/releases/latest"
+        "https://github.com/BezaleelPaul/file_organizer_flutter"
       ],
       "bullets": [
         "Local-first cross-platform file organizer and disk utility for desktop and mobile.",
