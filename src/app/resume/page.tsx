@@ -128,16 +128,15 @@ export default function ResumePage() {
                 <span>BEZALEEL</span> <span className="outline-text">PAUL.</span>
               </h1>
               <p className="mt-5 max-w-2xl font-sans text-sm leading-relaxed text-[var(--muted)] sm:text-base">
-                A structured, synchronized record of my engineering education, practical experience,
-                and technical toolkit across mobile, web, and applied machine learning.
+                Computer Science undergraduate focused on applied AI, software engineering, and building useful products.
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[9px] uppercase tracking-[0.12em] text-[var(--muted)]">
                 <span className="flex items-center gap-1.5 text-[var(--accent)]">
                   <span className="h-2 w-2 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)] animate-pulse" />
-                  SYS VERIFIED // PILOT 01
+                  PORTFOLIO / RESUME // NOV 2026
                 </span>
                 <span>BENGALURU, INDIA · 12°58&apos; N / 77°36&apos; E</span>
-                <span>OPEN TO SWE INTERNSHIPS</span>
+                <span>OPEN TO SOFTWARE ENGINEERING INTERNSHIPS</span>
               </div>
             </div>
 
@@ -435,7 +434,7 @@ export default function ResumePage() {
                         <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                           {project.links.map((url) => (
                             <a key={url} href={url} target={url.startsWith('http') ? '_blank' : undefined} rel={url.startsWith('http') ? 'noopener noreferrer' : undefined} className="font-mono text-[8px] font-semibold uppercase tracking-[0.1em] text-[var(--text)] underline decoration-[var(--accent)] underline-offset-4 hover:text-[var(--accent)]">
-                              {url.includes('github.com') ? 'Source repository ↗' : 'Live project ↗'}
+                              {url.includes('github.com') ? 'Source repository ↗' : url.includes('#') ? 'View project on portfolio ↗' : 'Open live project ↗'}
                             </a>
                           ))}
                         </div>
@@ -507,12 +506,10 @@ export default function ResumePage() {
                   </DossierSectionHeading>
                   <a
                     href={data.projectsQR.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="group flex flex-col sm:flex-row items-center gap-5 rounded border border-[var(--line)] bg-[rgba(10,10,15,0.6)] p-4 transition-all hover:border-[var(--accent)] hover:bg-[rgba(16,16,22,0.8)]"
                   >
                     <div className="shrink-0 rounded bg-white p-2.5 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                      <FolderGit2 className="h-12 w-12 text-black" />
+                      <img src="/qr/project-archive.png" alt="QR code linking to the live project archive" className="h-28 w-28 object-contain" />
                     </div>
                     <div className="flex-1 text-center sm:text-left">
                       <div className="flex items-center justify-center sm:justify-start gap-2">
