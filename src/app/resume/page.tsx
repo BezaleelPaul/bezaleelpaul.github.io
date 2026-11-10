@@ -509,7 +509,7 @@ export default function ResumePage() {
                     className="group flex flex-col sm:flex-row items-center gap-5 rounded border border-[var(--line)] bg-[rgba(10,10,15,0.6)] p-4 transition-all hover:border-[var(--accent)] hover:bg-[rgba(16,16,22,0.8)]"
                   >
                     <div className="shrink-0 rounded bg-white p-2.5 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                      <img src="/qr/project-archive.png" alt="QR code linking to the live project archive" className="h-28 w-28 object-contain" />
+                      <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&format=png&data=https%3A%2F%2Fbezaleel-paul-portfolio.vercel.app%2Fprojects%2F" alt="QR code linking to the live project archive" className="h-28 w-28 object-contain" />
                     </div>
                     <div className="flex-1 text-center sm:text-left">
                       <div className="flex items-center justify-center sm:justify-start gap-2">
