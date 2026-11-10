@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import resumeJsonData from '@/data/resume.json';
+import { resumePdfBase64 } from '@/data/resumePdf';
 import { ResumeData } from '@/types/resume';
 
 const initialResume = resumeJsonData as unknown as ResumeData;
@@ -144,7 +145,7 @@ export default function ResumePage() {
             {/* Action Toolbar */}
             <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1 lg:col-span-4">
               <a
-                href="/resume.pdf"
+                href={`data:application/pdf;base64,${resumePdfBase64}`}
                 download="Bezaleel-Paul-Resume.pdf"
                 className="action-button primary w-full !justify-between"
               >
