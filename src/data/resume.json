@@ -1,19 +1,19 @@
 {
   "name": "BEZALEEL PAUL",
   "nameAccent": "N",
-  "title": "Applied AI & Software Engineering | SWE Intern Candidate",
-  "tagline": "Seeking SWE Internship",
+  "title": "Computer Science Undergraduate | Applied AI & Software Engineering",
+  "tagline": "Open to Software Engineering Internships",
   "photo": "photo.jpg",
   "terminal": [
     "$ whoami",
-    "> Applied AI + Software Engineering",
-    "$ focus",
-    "> building and validating useful systems"
+    "> Computer Science · Applied AI · Software Engineering",
+    "$ currently_building",
+    "> practical software, ML systems & interactive experiences"
   ],
   "contact": [
     [
       "Location",
-      "Bangalore, Karnataka"
+      "Bengaluru, Karnataka, India"
     ],
     [
       "Phone",
@@ -40,67 +40,66 @@
     [
       "Languages",
       [
-        "Dart",
         "Python",
+        "Dart",
         "JavaScript",
-        "HTML/CSS",
-        "C"
+        "TypeScript",
+        "C / C++"
       ]
     ],
     [
-      "Frameworks",
+      "Application",
       [
         "Flutter",
-        "Flask",
-        "Streamlit",
-        "Tkinter",
-        "Bootstrap"
+        "Next.js",
+        "React",
+        "FastAPI",
+        "Flask"
       ]
     ],
     [
-      "ML / Data",
+      "AI / Data",
       [
-        "LightGBM",
+        "TensorFlow",
         "XGBoost",
+        "Scikit-learn",
+        "Pandas",
         "Plotly"
       ]
     ],
     [
-      "Tools",
+      "Engineering",
       [
-        "Git",
-        "GitHub",
         "REST APIs",
-        "Firebase"
+        "Git / GitHub",
+        "Firebase",
+        "Linux",
+        "SQL"
       ]
     ],
     [
-      "Concepts",
+      "Foundations",
       [
-        "DSA",
+        "Data Structures & Algorithms",
         "OOP",
-        "Mobile Architecture"
+        "Computer Vision",
+        "Model Evaluation"
       ]
     ]
   ],
   "education": [
     [
-      "B.Tech, Computer Science",
+      "B.Tech, Computer Science & Engineering",
       "CMR University",
-      "Sep 2025 – Present | Exp. 2029"
+      "2025 – 2029 · Second year"
     ],
     [
       "BS, Data Science & Applications",
       "IIT Madras",
-      "Jun 2026 – Present | Exp. 2030"
+      "2026 – 2030 · In progress"
     ]
   ],
-  "certifications": [
-    "AI Apps w/ Gemini & Imagen — Google, Apr 2026",
-    "Data Analytics with Python — NPTEL, Apr 2026",
-    "Claude Code in Action — Anthropic, Mar 2026",
-    "Flutter Software Training — CMR Univ., Feb 2026"
-  ],
+  "certifications": [],
   "languages": [
     [
       "English",
@@ -125,21 +124,37 @@
   ],
   "coursework": [
     "Data Structures & Algorithms",
-    "Object-Oriented Programming",
-    "Mobile App Architecture",
-    "RESTful API & Backend",
-    "Database Management Systems"
+    "Programming & OOP",
+    "Statistics",
+    "Python Programming",
+    "Database Systems"
   ],
-  "summary": "Second-year Computer Science undergraduate at CMR University and IIT Madras BS Data Science student, interested in applied AI and software engineering. Building practical projects across machine learning, explainability, mobile applications, and interactive web systems. Seeking a software engineering internship to contribute to real products while strengthening engineering fundamentals.",
+  "summary": "Second-year Computer Science undergraduate at CMR University, also pursuing the BS in Data Science and Applications at IIT Madras. Focused on applied AI and software engineering: building practical applications, exploring explainable machine learning, and turning technical ideas into usable products. Interested in software engineering internships where strong fundamentals, thoughtful implementation, and continuous learning matter.",
   "experience": [
     {
-      "role": "Former EXCOM Member & Webmaster",
-      "org": "IEEE CMR University Student Branch",
-      "place": "CMR University, Bengaluru, India",
+      "role": "Software Development Intern",
+      "org": "Eazy Walkers Digital",
+      "place": "India · Sep 2026 – Present",
       "bullets": [
-        "Engineered and maintained responsive web platforms for IEEE CMR Student Branch using Next.js and modern web tooling.",
-        "Organized technical workshops, hackathons, and webinars reaching 500+ student attendees across campus.",
-        "Mentored 60+ junior peers on Git, open-source development workflows, and cross-platform Flutter fundamentals."
+        "Contributing to software development work in a professional team environment."
+      ]
+    },
+    {
+      "role": "Former EXCOM Member & Webmaster Volunteer",
+      "org": "IEEE CMR University Student Branch",
+      "place": "Bengaluru · Dec 2025 – Sep 2026",
+      "bullets": [
+        "Maintained and developed student-branch web experiences using Next.js and modern frontend tooling.",
+        "Supported the branch's digital presence and technical community activities."
+      ]
+    },
+    {
+      "role": "Team Lead — Drishti-AI",
+      "org": "Smart India Hackathon 2026 · Software Prototype",
+      "place": "India · 2026",
+      "bullets": [
+        "Leading a multidisciplinary team developing an explainable-AI prototype for diabetic-retinopathy screening.",
+        "Coordinating model, safety, clinical-workflow, and Flutter application workstreams."
       ]
     }
   ],
@@ -148,22 +163,24 @@
       "name": "Drishti-AI — Explainable Retinal Screening",
       "tech": "Python · TensorFlow · Flutter · Computer Vision · Explainable AI",
       "links": [
+        "/projects/#drishti-ai",
         "https://github.com/BezaleelPaul/Drishti-AI"
       ],
       "bullets": [
-        "SIH software prototype exploring explainable diabetic-retinopathy screening and clinician-in-the-loop workflows.",
-        "Focus on image-quality assessment, model evidence, and responsible evaluation."
+        "Leading a Smart India Hackathon software prototype for explainable diabetic-retinopathy screening.",
+        "Explores fundus-image quality assessment, DR grading, model evidence, and clinician-in-the-loop review."
       ]
     },
     {
       "name": "Orbital Observatory — 3D Keplerian Engine",
       "tech": "Next.js · TypeScript · React Three Fiber · Three.js",
       "links": [
-        "https://github.com/BezaleelPaul/Orbital-Observatory",
-        "/observatory/"
+        "/projects/#celestial-observatory-3d",
+        "/observatory",
+        "https://github.com/BezaleelPaul/Orbital-Observatory"
       ],
       "bullets": [
-        "Interactive planetarium with Keplerian orbital mechanics and procedural planetary data.",
+        "Interactive digital planetarium with a custom Keplerian orbital solver and procedural planetary data.",
         "Includes multiple camera modes and optional NASA open-data context."
       ]
     },
@@ -171,31 +188,46 @@
       "name": "Mise — File Organizer & Disk Intelligence",
       "tech": "Flutter · Dart · Python · Cross-platform",
       "links": [
+        "/projects/#file-organizer-ecosystem",
         "https://github.com/BezaleelPaul/file_organizer_flutter"
       ],
       "bullets": [
-        "Cross-platform file-organization and disk-intelligence project.",
-        "Explores selective undo, duplicate analysis, and safer file workflows."
+        "Local-first cross-platform file organizer and disk utility for desktop and mobile.",
+        "Focuses on selective undo, duplicate analysis, and safer file-organization workflows."
       ]
     },
     {
       "name": "NADICARE Twin Engine",
       "tech": "Python · XGBoost · Streamlit · Plotly",
       "links": [
+        "/projects/#nadicare-twin-engine",
         "https://github.com/BezaleelPaul/bnmit-nadicare-health"
       ],
       "bullets": [
         "Healthcare-focused digital-twin prototype for physiological response and recovery modeling.",
-        "Uses predictive modeling and interactive telemetry visualizations."
+        "Combines predictive modeling with interactive telemetry visualizations."
       ]
     }
   ],
   "projectsQR": {
-    "url": "/projects/",
-    "label": "Explore the project archive",
+    "url": "https://bezaleel-paul-portfolio.vercel.app/projects/",
+    "label": "Explore selected projects",
     "display": "bezaleel-paul-portfolio.vercel.app/projects/",
-    "note": "Current portfolio project archive with source repositories and available demonstrations."
+    "note": "Scan to open the live project archive, then follow each project to its dedicated portfolio entry and source repository."
   },
-  "footer": "Open to Software Engineering / Applied AI Internships",
-  "extra": []
+  "footer": "Open to Software Engineering & Applied AI Internships",
+  "extra": [
+    {
+      "title": "Creative Practice",
+      "items": [
+        {
+          "title": "Music production & guitar",
+          "meta": "Electric guitar · REAPER · Waveform · LMMS · VST instruments & effects",
+          "bullets": [
+            "Exploring composition, recording, sound design, and digital audio production alongside software engineering."
+          ]
+        }
+      ]
+    }
+  ]
 }
