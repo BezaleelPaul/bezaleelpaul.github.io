@@ -150,27 +150,16 @@ function syncUpdates() {
     }
   }
 
-  // 3. Always ensure verified timelines & links match exactly
-  data.contact = [
-    ["Location", "Bangalore, Karnataka"],
-    ["Phone", "7892347356"],
-    ["Email", "bezaleel321@gmail.com"],
-    ["LinkedIn", "linkedin.com/in/bezaleel-pauln"],
-    ["Portfolio", "bezaleelpaul.github.io"],
-    ["GitHub", "github.com/BezaleelPaul"]
-  ];
-
-  data.education = [
-    ["B.Tech, Computer Science", "CMR University", "Sep 2025 – Present | Exp. 2029"],
-    ["BS, Data Science & Applications", "IIT Madras", "Jun 2026 – Present | Exp. 2030"]
-  ];
-
-  data.projectsQR = {
-    url: "https://bezaleelpaul.github.io/projects/",
-    label: "Scan to view all my projects",
-    display: "bezaleelpaul.github.io/projects",
-    note: "Flutter apps, AI/ML platforms & full-stack web apps, with source code and live demos"
-  };
+  // Keep the canonical profile data intact; never overwrite links, education,
+  // or QR destinations with stale hard-coded values during synchronization.
+  if (!data.projectsQR || !data.projectsQR.url) {
+    data.projectsQR = {
+      url: "https://bezaleel-paul-portfolio.vercel.app/projects/",
+      label: "Explore the project archive",
+      display: "bezaleel-paul-portfolio.vercel.app/projects/",
+      note: "Current portfolio archive with project write-ups, source repositories and available demos"
+    };
+  }
 
   // Re-organize skills cleanly
   data.skills = organizeSkills(data.skills);
