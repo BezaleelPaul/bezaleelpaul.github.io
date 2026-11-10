@@ -44,6 +44,7 @@ export interface ProjectItem {
   stack: string[];
   featured: boolean;
   repoUrl: string;
+  imageUrl?: string;
   demoUrl?: string | null;
   status: 'Production' | 'Active' | 'Prototype' | 'Open Source';
   metrics?: string;
@@ -82,10 +83,11 @@ export interface AchievementItem {
   title: string;
   issuer: string;
   date: string;
-  category: 'Competitive Programming' | 'Academic' | 'Hackathon' | 'Certification';
+  category: 'Competitive Programming' | 'Academic' | 'Hackathon' | 'Certification' | 'Technical Operations';
   summary: string;
   metrics?: string;
   link?: string;
+  evidenceLinks?: { label: string; url: string }[];
 }
 
 export interface GitHubAnalyticsData {

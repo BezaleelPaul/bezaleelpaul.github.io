@@ -11,14 +11,14 @@ import {
 export const INITIAL_PROFILE: PilotProfile = {
   name: "Bezaleel Paul N",
   callsign: "BezForge",
-  headline: "Software Developer · Flutter · Full-Stack · AI/ML",
-  subheadline: "B.Tech CSE @ CMR University ('25–'29) · BS in Data Science @ IIT Madras ('26–Present) · IEEE EXCOM Member & Webmaster ('25–'26). Building practical apps, fast mobile experiences, and exploring machine learning.",
+  headline: "Applied AI & Software Engineering",
+  subheadline: "B.Tech Computer Science at CMR University · BS in Data Science at IIT Madras · Building practical software and applied-AI systems.",
   location: "Bangalore, India",
   status: "Open to SWE Internships & Collaborations",
   bio: [
-    "Hey! I'm Bezaleel Paul (friends call me Bez). I'm a developer and CS undergraduate based in Bangalore, pursuing my B.Tech at CMR University alongside a BS in Data Science from IIT Madras.",
-    "I love building software that people actually use — from fast, responsive Flutter mobile apps to predictive machine learning prototypes and everyday civic utilities. When I run into an annoying problem (like messy folders with hundreds of unsorted downloads or convoluted utility bills), my immediate instinct is to write a tool for it.",
-    "When I'm not writing code or solving LeetCode problems (135+ solved and counting!), you'll find me reading about space science and orbital mechanics, tinkering with Linux setups, or exploring filter coffee spots around Bangalore."
+    "I am Bezaleel Paul N, a software developer and computer science undergraduate based in Bengaluru, India. I am pursuing a B.Tech in Computer Science and Engineering at CMR University alongside the BS in Data Science programme at IIT Madras.",
+    "My primary interests are applied AI and software engineering: turning real requirements into usable systems, evaluating models carefully, and building dependable applications. I also work with Flutter and modern web technologies when they fit the problem.",
+    "I also contribute to the developer community through open-source work and technical events. I previously served as a Webmaster and EXCOM volunteer with the IEEE CMR University Student Branch. I am particularly interested in engineering fundamentals, thoughtful product design, and continuous learning."
   ],
   education: [
     {
@@ -44,7 +44,7 @@ export const INITIAL_PROFILE: PilotProfile = {
     "Daily problem solving — keeping sharp on data structures & algorithms",
     "Learn in public, share open-source code, and document the journey"
   ],
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume/",
   socials: [
     { name: "GitHub", handle: "@BezaleelPaul", url: "https://github.com/BezaleelPaul", icon: "github", primary: true },
     { name: "LinkedIn", handle: "in/bezaleel-pauln", url: "https://www.linkedin.com/in/bezaleel-pauln/", icon: "linkedin", primary: true },
@@ -67,10 +67,11 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
     description: "An interactive digital planetarium simulating planetary orbits, orbital inclination, axial tilt, and near-Earth object context with procedurally generated planetary data.",
     stack: ["Three.js", "React Three Fiber", "NASA Open API", "Keplerian Physics", "GLSL Shaders", "Next.js", "TypeScript"],
     featured: true,
-    repoUrl: "https://github.com/BezaleelPaul/bezaleelpaul.github.io",
+    repoUrl: "https://github.com/BezaleelPaul/Orbital-Observatory",
+    imageUrl: "https://opengraph.githubassets.com/1/BezaleelPaul/Orbital-Observatory",
     demoUrl: "/observatory",
     status: "Production",
-    metrics: "Interactive 3D orbital model with a lightweight background rendering mode.",
+    metrics: "Custom Keplerian solver, interactive orbital modes, and optional NASA data context.",
     highlights: [
       "Custom Keplerian orbital solver computing true anomaly via Newton-Raphson approximation",
       "NASA Open API context for daily astronomy imagery and near-Earth asteroid data",
@@ -88,6 +89,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
     stack: ["Python", "Streamlit", "XGBoost", "Plotly", "NumPy", "Scikit-Learn"],
     featured: true,
     repoUrl: "https://github.com/BezaleelPaul/bnmit-nadicare-health",
+    imageUrl: "https://raw.githubusercontent.com/BezaleelPaul/bnmit-nadicare-health/main/screenshots/screencapture-localhost-8501-2026-03-16-19_31_57.png",
     demoUrl: null,
     status: "Active",
     metrics: "Simulates continuous physiological load curves with dynamic recovery prediction.",
@@ -108,6 +110,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
     stack: ["Flutter", "Dart", "Python", "CLI", "Cross-Platform", "Desktop & Mobile"],
     featured: true,
     repoUrl: "https://github.com/BezaleelPaul/file_organizer_flutter",
+    imageUrl: "https://raw.githubusercontent.com/BezaleelPaul/file_organizer_flutter/main/assets/banner.png",
     demoUrl: null,
     status: "Production",
     metrics: "Sub-second filesystem classification with transactional safety undo logs.",
@@ -147,7 +150,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
     description: "An educational mathematics software tool designed to visualize series convergence, error bounds, and function behavior across arbitrary degrees.",
     stack: ["JavaScript", "HTML5 Canvas", "Calculus Algorithms", "LaTeX Math"],
     featured: false,
-    repoUrl: "https://github.com/BezaleelPaul",
+    repoUrl: "https://github.com/BezaleelPaul/Maclaurin-Visualizer",
     demoUrl: null,
     status: "Active",
     metrics: "60 FPS dynamic polynomial curve evaluation.",
@@ -159,15 +162,16 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
   },
   {
     id: "drishti-ai",
-    title: "Drishti-AI Vision System",
-    tagline: "Computer vision and visual intelligence research repository.",
+    title: "Drishti-AI: Explainable Retinal Screening",
+    tagline: "A Smart India Hackathon software prototype exploring explainable AI for diabetic-retinopathy screening in resource-constrained settings.",
     category: "AI / ML",
-    problem: "Real-time edge computer vision workflows often require streamlined pipeline integration.",
-    solution: "Implemented modular computer vision pipelines for feature extraction and object detection.",
-    description: "An ongoing AI research repository focusing on computer vision experiments, deep learning models, and real-time visual inferencing.",
-    stack: ["Python", "OpenCV", "TensorFlow", "Deep Learning"],
-    featured: false,
+    problem: "Retinal image screening workflows need clear image-quality checks, interpretable model evidence, and a clinician review path—especially where connectivity and specialist access are limited.",
+    solution: "Leading a multidisciplinary prototype that explores fundus-image quality assessment, DR grading, explainability outputs, and a clinician-in-the-loop review workflow.",
+    description: "An ongoing applied-AI project focused on responsible model evaluation and a practical screening workflow. Offline operation and deployment performance remain validation goals, not claimed production results.",
+    stack: ["Python", "TensorFlow", "Flutter", "Computer Vision", "Explainable AI", "MATLAB"],
+    featured: true,
     repoUrl: "https://github.com/BezaleelPaul/Drishti-AI",
+    imageUrl: "https://raw.githubusercontent.com/BezaleelPaul/Drishti-AI/master/presentation/screenshots/01_phc_dashboard_online.png",
     demoUrl: null,
     status: "Prototype",
     highlights: [
@@ -207,7 +211,7 @@ export const INITIAL_EXPERIENCE: ExperienceItem[] = [
     responsibilities: [
       "Engineered the NADICARE Twin Engine for physiological stress forecasting using XGBoost and dynamic Plotly dashboards.",
       "Developed cross-platform mobile and desktop utilities using Flutter, Dart, and Python.",
-      "Maintained 34 public repositories with automated GitHub Actions CI/CD workflows."
+      "Worked across personal and collaborative repositories using Git-based development workflows."
     ],
     skills: ["Python", "Flutter", "Machine Learning", "Full-Stack Web", "Git CI/CD"]
   },
@@ -235,7 +239,7 @@ export const INITIAL_EXPERIENCE: ExperienceItem[] = [
     type: "Leadership",
     summary: "Rigorous daily practice in computational complexity, dynamic programming, and data structure design.",
     responsibilities: [
-      "Solved 135+ complex algorithmic challenges on LeetCode across Arrays, Trees, Graphs, and DP.",
+      "Practised algorithmic problem solving across data structures, trees, graphs, and dynamic programming on LeetCode and Codeforces.",
       "Maintained an active rated profile on Codeforces with continuous performance evaluation.",
       "Consistently achieved structured solutions with optimal asymptotic time and space bounds."
     ],
@@ -267,7 +271,7 @@ export const INITIAL_SKILLS: SkillCategoryGroup[] = [
     skills: [
       { name: "Flutter", category: "Mobile", highlight: true },
       { name: "React.js", category: "Web", highlight: true },
-      { name: "Next.js 14", category: "Full-Stack", highlight: true },
+      { name: "Next.js", category: "Full-Stack", highlight: true },
       { name: "Tailwind CSS", category: "Styling", highlight: true },
       { name: "Three.js / WebGL", category: "3D Graphics" },
       { name: "Tkinter", category: "Desktop" }
@@ -307,17 +311,17 @@ export const INITIAL_SKILLS: SkillCategoryGroup[] = [
 export const INITIAL_ACHIEVEMENTS: AchievementItem[] = [
   {
     id: "leetcode-135",
-    title: "135+ Algorithmic Challenges Solved",
+    title: "Competitive Programming Practice",
     issuer: "LeetCode",
     date: "2025 — Present",
     category: "Competitive Programming",
-    summary: "Consistent practice across dynamic programming, graphs, trees, and array problems, with 116 Easy, 17 Medium, and 2 Hard challenges completed.",
+    summary: "Ongoing practice across data structures, dynamic programming, graphs, trees, and timed contests.",
     metrics: "LeetCode handle: BezaleelPaulN",
     link: "https://leetcode.com/u/BezaleelPaulN/"
   },
   {
     id: "codeforces-rating",
-    title: "Rated Competitor (959 Peak)",
+    title: "Codeforces Problem-Solving Profile",
     issuer: "Codeforces",
     date: "2025 — Present",
     category: "Competitive Programming",
@@ -336,12 +340,27 @@ export const INITIAL_ACHIEVEMENTS: AchievementItem[] = [
   },
   {
     id: "open-source-repos",
-    title: "34 Public Repositories & Continuous CI Automation",
+    title: "Open-Source Development",
     issuer: "GitHub",
     date: "2025 — Present",
     category: "Hackathon",
-    summary: "Built and maintained 34 repositories across utility tools, AI models, calculus visualizers, and Flutter apps with scheduled GitHub Actions pipelines.",
-    metrics: "34 public repositories"
+    summary: "Public work spanning developer utilities, AI experiments, mathematical visualizations, and Flutter applications.",
+    metrics: "GitHub: BezaleelPaul"
+  },
+  {
+    id: "campus-voting-2000",
+    title: "Campus Voting System — 2,000+ Student Voters",
+    issuer: "AC School, Jalahalli, Bengaluru",
+    date: "2026",
+    category: "Technical Operations",
+    summary: "Supported the execution of a campus voting system at AC School, Jalahalli, Bengaluru, used by approximately 2,000 students in a single day across 10 laptops, with no reported operational disruptions.",
+    metrics: "≈2,000 student voters · 10 laptops · 1 day",
+    link: "https://youtu.be/iDmTlF8fJuQ?t=78",
+    evidenceLinks: [
+      { label: "YouTube video (1:18)", url: "https://youtu.be/iDmTlF8fJuQ?t=78" },
+      { label: "Instagram reel 1", url: "https://www.instagram.com/reel/C75p8xvp1qS/?igsh=cXJyZDdidThrZDM0" },
+      { label: "Instagram reel 2", url: "https://www.instagram.com/reel/C75noSOpJ2F/?igsh=eHhmdXJleW1zeXR5" }
+    ]
   }
 ];
 
@@ -423,8 +442,8 @@ export const INITIAL_GITHUB_DATA: GitHubAnalyticsData = {
 
 export const INITIAL_ADMIN_SETTINGS: AdminSettings = {
   publishedAt: "2026-11-01T12:00:00Z",
-  resumeDownloadUrl: "/resume.pdf",
+  resumeDownloadUrl: "/resume/",
   showAiAssistant: true,
   hiddenProjectIds: [],
-  featuredProjectIds: ["nadicare-twin-engine", "file-organizer-ecosystem"]
+  featuredProjectIds: ["celestial-observatory-3d", "file-organizer-ecosystem", "drishti-ai"]
 };
