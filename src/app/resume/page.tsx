@@ -207,7 +207,7 @@ export default function ResumePage() {
                 <div className="flex items-center gap-5 border-b border-[var(--line)] pb-5">
                   <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-md border border-[var(--accent)] bg-[var(--surface-raised)] shadow-[0_0_15px_rgba(215,255,0,0.15)]">
                     <img
-                      src="/assets/portrait-processed.webp"
+                      src="/assets/portrait-speaker.svg"
                       alt={data.name}
                       className="h-full w-full object-cover object-top filter brightness-[1.03] contrast-[1.05]"
                       onError={(e) => {
