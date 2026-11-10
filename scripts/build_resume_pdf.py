@@ -15,7 +15,7 @@ from reportlab.lib.units import mm
 from reportlab.graphics.barcode.qr import QrCodeWidget
 from reportlab.graphics.shapes import Drawing
 from reportlab.graphics import renderPDF
-from reportlab.platypus import Flowable, Paragraph, Spacer, Table, TableStyle, HRFlowable, SimpleDocTemplate
+from reportlab.platypus import Flowable, Paragraph, Spacer, Table, TableStyle, HRFlowable, SimpleDocTemplate, Image as RLImage
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "src/data/resume.json").read_text(encoding="utf-8"))
@@ -76,7 +76,24 @@ def section(label):
 def bullet(value):
     return P("• " + escape(value), "Bullet")
 
-left = [P("CONTACT", "SideHead")]
+portrait_path = PUBLIC / "assets/portrait-processed.webp"
+left = []
+if portrait_path.exists():
+    portrait = RLImage(str(portrait_path), width=27 * mm, height=31 * mm, kind="proportional")
+    portrait.hAlign = "CENTER"
+    portrait_frame = Table([[portrait]], colWidths=[42 * mm], rowHeights=[34 * mm])
+    portrait_frame.setStyle(TableStyle([
+        ("BACKGROUND", (0,0), (-1,-1), colors.white),
+        ("BOX", (0,0), (-1,-1), .7, teal),
+        ("ALIGN", (0,0), (-1,-1), "CENTER"),
+        ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
+        ("LEFTPADDING", (0,0), (-1,-1), 2),
+        ("RIGHTPADDING", (0,0), (-1,-1), 2),
+        ("TOPPADDING", (0,0), (-1,-1), 2),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 2),
+    ]))
+    left += [portrait_frame, Spacer(1, 3)]
+left.append(P("CONTACT", "SideHead"))
 for key, value in DATA.get("contact", []):
     left.append(P(escape(value), "Side"))
 left += section("Education")
