@@ -1,8 +1,8 @@
 {
   "name": "BEZALEEL PAUL",
   "nameAccent": "N",
-  "title": "Applied AI & Software Engineering | SWE Intern Candidate",
-  "tagline": "Seeking SWE Internship",
+  "title": "Computer Science Undergraduate | Applied AI & Software Engineering",
+  "tagline": "Second-year CS student · Open to SWE internships",
   "photo": "photo.jpg",
   "terminal": [
     "$ whoami",
@@ -40,29 +40,34 @@
     [
       "Languages",
       [
-        "Dart",
         "Python",
+        "Dart",
         "JavaScript",
-        "HTML/CSS",
-        "C"
+        "TypeScript",
+        "C",
+        "HTML/CSS"
       ]
     ],
     [
       "Frameworks",
       [
         "Flutter",
+        "Next.js",
+        "React",
         "Flask",
         "Streamlit",
-        "Tkinter",
-        "Bootstrap"
+        "Tailwind CSS"
       ]
     ],
     [
-      "ML / Data",
+      "AI / Data",
       [
-        "LightGBM",
+        "TensorFlow",
         "XGBoost",
-        "Plotly"
+        "LightGBM",
+        "Scikit-learn",
+        "Plotly",
+        "OpenCV"
       ]
     ],
     [
@@ -70,8 +75,9 @@
       [
         "Git",
         "GitHub",
+        "Firebase",
         "REST APIs",
-        "Firebase"
+        "Linux"
       ]
     ],
     [
@@ -79,6 +85,8 @@
       [
         "DSA",
         "OOP",
+        "Computer Vision",
+        "Explainable AI",
         "Mobile Architecture"
       ]
     ]
@@ -130,16 +138,16 @@
     "RESTful API & Backend",
     "Database Management Systems"
   ],
-  "summary": "Second-year Computer Science undergraduate at CMR University and IIT Madras BS Data Science student, interested in applied AI and software engineering. Building practical projects across machine learning, explainability, mobile applications, and interactive web systems. Seeking a software engineering internship to contribute to real products while strengthening engineering fundamentals.",
+  "summary": "Second-year Computer Science undergraduate at CMR University, also pursuing the BS in Data Science & Applications at IIT Madras. Focused on applied AI and software engineering, with hands-on work across explainable computer vision, Flutter applications, full-stack web systems and interactive 3D experiences. Interested in building reliable products and strengthening engineering fundamentals through practical work.",
   "experience": [
     {
       "role": "Former EXCOM Member & Webmaster",
       "org": "IEEE CMR University Student Branch",
-      "place": "CMR University, Bengaluru, India",
+      "place": "CMR University, Bengaluru · Dec 2025 – Sep 2026",
       "bullets": [
-        "Engineered and maintained responsive web platforms for IEEE CMR Student Branch using Next.js and modern web tooling.",
-        "Organized technical workshops, hackathons, and webinars reaching 500+ student attendees across campus.",
-        "Mentored 60+ junior peers on Git, open-source development workflows, and cross-platform Flutter fundamentals."
+        "Maintained the student-branch web presence using Next.js and modern web tooling.",
+        "Supported technical workshops, hackathons and student-facing community initiatives.",
+        "Contributed to peer learning around Git, open-source workflows and Flutter development."
       ]
     }
   ],
@@ -151,8 +159,8 @@
         "https://github.com/BezaleelPaul/Drishti-AI"
       ],
       "bullets": [
-        "SIH software prototype exploring explainable diabetic-retinopathy screening and clinician-in-the-loop workflows.",
-        "Focus on image-quality assessment, model evidence, and responsible evaluation."
+        "Smart India Hackathon 2026 software prototype exploring explainable diabetic-retinopathy screening for resource-constrained settings.",
+        "Focuses on fundus image-quality assessment, clinician review and offline-first workflow design."
       ]
     },
     {
@@ -160,41 +168,43 @@
       "tech": "Next.js · TypeScript · React Three Fiber · Three.js",
       "links": [
         "https://github.com/BezaleelPaul/Orbital-Observatory",
-        "/observatory/"
+        "https://bezaleelpaul.github.io/Orbital-Observatory/",
+        "https://bezaleel-paul-portfolio.vercel.app/observatory/"
       ],
       "bullets": [
-        "Interactive planetarium with Keplerian orbital mechanics and procedural planetary data.",
-        "Includes multiple camera modes and optional NASA open-data context."
+        "Interactive 3D planetarium built around a custom Keplerian orbital solver, with selectable planets and simulation time controls.",
+        "Optional NASA Open API and ISS telemetry context; core simulation runs in the browser."
       ]
     },
     {
-      "name": "Mise — File Organizer & Disk Intelligence",
-      "tech": "Flutter · Dart · Python · Cross-platform",
+      "name": "Mise — Local-first File Organizer",
+      "tech": "Flutter · Dart · Desktop · Mobile · CLI",
       "links": [
-        "https://github.com/BezaleelPaul/file_organizer_flutter"
+        "https://github.com/BezaleelPaul/file_organizer_flutter",
+        "https://github.com/BezaleelPaul/file_organizer_flutter/releases/latest"
       ],
       "bullets": [
-        "Cross-platform file-organization and disk-intelligence project.",
-        "Explores selective undo, duplicate analysis, and safer file workflows."
+        "Cross-platform file organizer and disk-intelligence workstation for desktop, mobile and terminal.",
+        "Includes preview-before-move workflows, collision-safe operations, selective rollback and streamed duplicate analysis."
       ]
     },
     {
-      "name": "NADICARE Twin Engine",
-      "tech": "Python · XGBoost · Streamlit · Plotly",
+      "name": "NadiCare — Cardio-Fitness Digital Twin",
+      "tech": "Python · Streamlit · XGBoost · Plotly",
       "links": [
         "https://github.com/BezaleelPaul/bnmit-nadicare-health"
       ],
       "bullets": [
-        "Healthcare-focused digital-twin prototype for physiological response and recovery modeling.",
-        "Uses predictive modeling and interactive telemetry visualizations."
+        "Cardio-fitness digital-twin prototype for recovery modelling, physiological analytics and stress prediction.",
+        "Interactive dashboard for simulation, strategy comparison and safety monitoring."
       ]
     }
   ],
   "projectsQR": {
-    "url": "/projects/",
+    "url": "https://bezaleel-paul-portfolio.vercel.app/projects/",
     "label": "Explore the project archive",
     "display": "bezaleel-paul-portfolio.vercel.app/projects/",
-    "note": "Current portfolio project archive with source repositories and available demonstrations."
+    "note": "Scan to open the current portfolio archive with project write-ups, source repositories and available demos."
   },
   "footer": "Open to Software Engineering / Applied AI Internships",
   "extra": []
