@@ -442,7 +442,7 @@ export const INITIAL_GITHUB_DATA: GitHubAnalyticsData = {
 
 export const INITIAL_ADMIN_SETTINGS: AdminSettings = {
   publishedAt: "2026-11-01T12:00:00Z",
-  resumeDownloadUrl: "/resume/",
+  resumeDownloadUrl: "/resume.pdf",
   showAiAssistant: true,
   hiddenProjectIds: [],
   featuredProjectIds: ["celestial-observatory-3d", "file-organizer-ecosystem", "drishti-ai"]
