@@ -44,7 +44,7 @@ export const INITIAL_PROFILE: PilotProfile = {
     "Daily problem solving — keeping sharp on data structures & algorithms",
     "Learn in public, share open-source code, and document the journey"
   ],
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume/",
   socials: [
     { name: "GitHub", handle: "@BezaleelPaul", url: "https://github.com/BezaleelPaul", icon: "github", primary: true },
     { name: "LinkedIn", handle: "in/bezaleel-pauln", url: "https://www.linkedin.com/in/bezaleel-pauln/", icon: "linkedin", primary: true },
