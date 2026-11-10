@@ -8,3 +8,11 @@
 @media(max-width:650px){.studio-workflow{grid-template-columns:1fr;padding-bottom:85px}.studio-workflow-card{min-height:230px}}
 
 .studio-process h2{font-size:clamp(48px,7vw,88px);line-height:.9}.studio-process-accent{color:#d7ff00}.studio-process-subtitle{font:500 11px var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:rgba(247,248,242,.52);margin:18px 0 0}
+
+.studio-guitar-portrait{margin:4px 0 24px;border:1px solid rgba(255,255,255,.17);background:#08080c;overflow:hidden}
+.studio-guitar-portrait img{display:block;width:100%;aspect-ratio:5/4;object-fit:cover;object-position:center 42%;filter:saturate(.88);transition:transform .45s ease}
+.studio-guitar-portrait:hover img{transform:scale(1.025)}
+.studio-guitar-portrait figcaption{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;font:8px var(--mono,monospace);letter-spacing:.12em;color:rgba(247,248,242,.56)}
+.studio-guitar-portrait figcaption span:first-child{color:#d7ff00}
+@media(max-width:650px){.studio-guitar-portrait img{aspect-ratio:4/3}.studio-guitar-portrait figcaption{font-size:7px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.studio-guitar-portrait img{transition:none}}
