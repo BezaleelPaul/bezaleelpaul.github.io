@@ -327,7 +327,7 @@ export const INITIAL_ACHIEVEMENTS: AchievementItem[] = [
     category: "Competitive Programming",
     summary: "Active participant in timed algorithmic contests testing rapid implementation and asymptotic optimization.",
     metrics: "Handle: BezaleelPaulN",
-    link: "https://codeforces.com/profile/BezaleelPaulN"
+    link: "https://codeforces.com/profile/BezaleelPaulN2228"
   },
   {
     id: "iit-madras-admit",
