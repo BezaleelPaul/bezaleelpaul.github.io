@@ -50,7 +50,7 @@ export const INITIAL_PROFILE: PilotProfile = {
     { name: "LinkedIn", handle: "in/bezaleel-pauln", url: "https://www.linkedin.com/in/bezaleel-pauln/", icon: "linkedin", primary: true },
     { name: "X (Twitter)", handle: "@BezaleelPaul1", url: "https://x.com/BezaleelPaul1", icon: "twitter", primary: true },
     { name: "LeetCode", handle: "BezaleelPaulN", url: "https://leetcode.com/u/BezaleelPaulN/", icon: "code", primary: true },
-    { name: "Codeforces", handle: "BezaleelPaulN", url: "https://codeforces.com/profile/BezaleelPaulN", icon: "terminal" },
+    { name: "Codeforces", handle: "BezaleelPaulN", url: "https://codeforces.com/profile/BezaleelPaulN2228", icon: "terminal" },
     { name: "Kaggle", handle: "bezaleelpaul", url: "https://www.kaggle.com/bezaleelpaul", icon: "database" },
     { name: "Email", handle: "bezaleel321@gmail.com", url: "mailto:bezaleel321@gmail.com", icon: "mail", primary: true }
   ]
