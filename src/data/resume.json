@@ -207,5 +207,28 @@
     "note": "Scan to open the current portfolio archive with project write-ups, source repositories and available demos."
   },
   "footer": "Open to Software Engineering / Applied AI Internships",
-  "extra": []
+  "extra": [
+    {
+      "title": "Creative practice",
+      "items": [
+        {
+          "title": "Music production & sound design",
+          "meta": "Electric guitar · REAPER · Waveform · LMMS",
+          "bullets": [
+            "Composing and producing music with VST instruments and effects; electric guitar is part of the hands-on workflow."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Programming practice",
+      "items": [
+        {
+          "title": "Problem-solving snapshot",
+          "meta": "GitHub: 34 repositories · LeetCode: 135 solved · Codeforces: 959 rating",
+          "bullets": []
+        }
+      ]
+    }
+  ]
 }
