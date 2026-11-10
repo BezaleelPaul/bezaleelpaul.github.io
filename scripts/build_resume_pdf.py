@@ -149,9 +149,6 @@ layout.setStyle(TableStyle([
     ("RIGHTPADDING", (0,0), (-1,-1), 0), ("TOPPADDING", (0,0), (-1,-1), 0),
     ("BOTTOMPADDING", (0,0), (-1,-1), 0)
 ]))
-doc = SimpleDocTemplate(str(PUBLIC / "resume.pdf"), pagesize=A4,
-                        leftMargin=8*mm, rightMargin=8*mm, topMargin=6*mm, bottomMargin=6*mm,
-                        title=DATA["name"] + " — Resume", author=DATA["name"])
 pdf_path = PUBLIC / "resume.pdf"
 doc = SimpleDocTemplate(str(pdf_path), pagesize=A4,
                         leftMargin=8*mm, rightMargin=8*mm, topMargin=6*mm, bottomMargin=6*mm,
@@ -159,8 +156,8 @@ doc = SimpleDocTemplate(str(pdf_path), pagesize=A4,
 doc.build([layout, Spacer(1, 2), P("BEZALEEL PAUL N  •  APPLIED AI & SOFTWARE ENGINEERING  •  NOVEMBER 2026", "Footer")])
 pdf_b64 = base64.b64encode(pdf_path.read_bytes()).decode("ascii")
 (ROOT / "src/data/resumePdf.ts").write_text(
-    "// Generated from src/data/resume.json; do not edit manually.\\n"
-    + "export const resumePdfBase64 = " + json.dumps(pdf_b64) + ";\\n",
+    "// Generated from src/data/resume.json; do not edit manually.\n"
+    + "export const resumePdfBase64 = " + json.dumps(pdf_b64) + ";\n",
     encoding="utf-8"
 )
 print("Generated public/resume.pdf, src/data/resumePdf.ts and public/project-archive-qr.svg")
