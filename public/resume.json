@@ -1,14 +1,14 @@
 {
   "name": "BEZALEEL PAUL",
   "nameAccent": "N",
-  "title": "Software Engineering Intern | Flutter & Full-Stack Developer",
-  "tagline": "Seeking SWE Internship",
+  "title": "Computer Science Undergraduate | Applied AI & Software Engineering",
+  "tagline": "Second-year CS student · Open to SWE internships",
   "photo": "photo.jpg",
   "terminal": [
     "$ whoami",
-    "> Flutter & Full-Stack Dev",
-    "$ status",
-    "> open to internships"
+    "> Applied AI + Software Engineering",
+    "$ focus",
+    "> building and validating useful systems"
   ],
   "contact": [
     [
@@ -29,7 +29,7 @@
     ],
     [
       "Portfolio",
-      "bezaleelpaul.github.io"
+      "https://bezaleel-paul-portfolio.vercel.app/"
     ],
     [
       "GitHub",
@@ -40,29 +40,34 @@
     [
       "Languages",
       [
-        "Dart",
         "Python",
+        "Dart",
         "JavaScript",
-        "HTML/CSS",
-        "C"
+        "TypeScript",
+        "C",
+        "HTML/CSS"
       ]
     ],
     [
       "Frameworks",
       [
         "Flutter",
+        "Next.js",
+        "React",
         "Flask",
         "Streamlit",
-        "Tkinter",
-        "Bootstrap"
+        "Tailwind CSS"
       ]
     ],
     [
-      "ML / Data",
+      "AI / Data",
       [
-        "LightGBM",
+        "TensorFlow",
         "XGBoost",
-        "Plotly"
+        "LightGBM",
+        "Scikit-learn",
+        "Plotly",
+        "OpenCV"
       ]
     ],
     [
@@ -70,8 +75,9 @@
       [
         "Git",
         "GitHub",
+        "Firebase",
         "REST APIs",
-        "Firebase"
+        "Linux"
       ]
     ],
     [
@@ -79,6 +85,8 @@
       [
         "DSA",
         "OOP",
+        "Computer Vision",
+        "Explainable AI",
         "Mobile Architecture"
       ]
     ]
@@ -130,26 +138,97 @@
     "RESTful API & Backend",
     "Database Management Systems"
   ],
-  "summary": "Computer Science undergraduate with hands-on experience building cross-platform Flutter mobile apps and full-stack web applications. Skilled in Dart, Python, JavaScript, and AI tool integration. Seeking a Software Development / Mobile App Development Internship to contribute to real-world engineering projects and grow as a developer.",
+  "summary": "Second-year Computer Science undergraduate at CMR University, also pursuing the BS in Data Science & Applications at IIT Madras. Focused on applied AI and software engineering, with hands-on work across explainable computer vision, Flutter applications, full-stack web systems and interactive 3D experiences. Interested in building reliable products and strengthening engineering fundamentals through practical work.",
   "experience": [
     {
-      "role": "EXCOM Member & Webmaster",
+      "role": "Former EXCOM Member & Webmaster",
       "org": "IEEE CMR University Student Branch",
-      "place": "CMR University, Bengaluru, India",
+      "place": "CMR University, Bengaluru · Dec 2025 – Sep 2026",
       "bullets": [
-        "Engineered and maintained responsive web platforms for IEEE CMR Student Branch using Next.js and modern web tooling.",
-        "Organized technical workshops, hackathons, and webinars reaching 500+ student attendees across campus.",
-        "Mentored 60+ junior peers on Git, open-source development workflows, and cross-platform Flutter fundamentals."
+        "Maintained the student-branch web presence using Next.js and modern web tooling.",
+        "Supported technical workshops, hackathons and student-facing community initiatives.",
+        "Contributed to peer learning around Git, open-source workflows and Flutter development."
       ]
     }
   ],
-  "projects": [],
+  "projects": [
+    {
+      "name": "Drishti-AI — Explainable Retinal Screening",
+      "tech": "Python · TensorFlow · Flutter · Computer Vision · Explainable AI",
+      "links": [
+        "https://github.com/BezaleelPaul/Drishti-AI"
+      ],
+      "bullets": [
+        "Smart India Hackathon 2026 software prototype exploring explainable diabetic-retinopathy screening for resource-constrained settings.",
+        "Focuses on fundus image-quality assessment, clinician review and offline-first workflow design."
+      ]
+    },
+    {
+      "name": "Orbital Observatory — 3D Keplerian Engine",
+      "tech": "Next.js · TypeScript · React Three Fiber · Three.js",
+      "links": [
+        "https://github.com/BezaleelPaul/Orbital-Observatory",
+        "https://bezaleelpaul.github.io/Orbital-Observatory/",
+        "https://bezaleel-paul-portfolio.vercel.app/observatory/"
+      ],
+      "bullets": [
+        "Interactive 3D planetarium built around a custom Keplerian orbital solver, with selectable planets and simulation time controls.",
+        "Optional NASA Open API and ISS telemetry context; core simulation runs in the browser."
+      ]
+    },
+    {
+      "name": "Mise — Local-first File Organizer",
+      "tech": "Flutter · Dart · Desktop · Mobile · CLI",
+      "links": [
+        "https://github.com/BezaleelPaul/file_organizer_flutter",
+        "https://github.com/BezaleelPaul/file_organizer_flutter/releases/latest"
+      ],
+      "bullets": [
+        "Cross-platform file organizer and disk-intelligence workstation for desktop, mobile and terminal.",
+        "Includes preview-before-move workflows, collision-safe operations, selective rollback and streamed duplicate analysis."
+      ]
+    },
+    {
+      "name": "NadiCare — Cardio-Fitness Digital Twin",
+      "tech": "Python · Streamlit · XGBoost · Plotly",
+      "links": [
+        "https://github.com/BezaleelPaul/bnmit-nadicare-health"
+      ],
+      "bullets": [
+        "Cardio-fitness digital-twin prototype for recovery modelling, physiological analytics and stress prediction.",
+        "Interactive dashboard for simulation, strategy comparison and safety monitoring."
+      ]
+    }
+  ],
   "projectsQR": {
-    "url": "https://bezaleelpaul.github.io/projects/",
-    "label": "Scan to view all my projects",
-    "display": "bezaleelpaul.github.io/projects",
-    "note": "Flutter apps, AI/ML platforms & full-stack web apps, with source code and live demos"
+    "url": "https://bezaleel-paul-portfolio.vercel.app/projects/",
+    "label": "Explore the project archive",
+    "display": "bezaleel-paul-portfolio.vercel.app/projects/",
+    "note": "Scan to open the current portfolio archive with project write-ups, source repositories and available demos."
   },
-  "footer": "Open to Software Development / Flutter Internships",
-  "extra": []
+  "footer": "Open to Software Engineering / Applied AI Internships",
+  "extra": [
+    {
+      "title": "Creative practice",
+      "items": [
+        {
+          "title": "Music production & sound design",
+          "meta": "Electric guitar · REAPER · Waveform · LMMS",
+          "bullets": [
+            "Composing and producing music with VST instruments and effects; electric guitar is part of the hands-on workflow."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Programming practice",
+      "items": [
+        {
+          "title": "Problem-solving snapshot",
+          "meta": "GitHub: 34 repositories · LeetCode: 135 solved · Codeforces: 959 rating",
+          "bullets": []
+        }
+      ]
+    }
+  ]
 }
