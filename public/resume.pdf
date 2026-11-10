@@ -1,144 +1,156 @@
 %PDF-1.4
-%ASCII ReportLab Generated PDF document (opensource)
+%ASCII
 1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R
->>
+<< /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R /Annots [7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R] >>
 endobj
 4 0 obj
-<<
-/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 5 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#drishti-ai)
->> /Border [ 0 0 0 ] /Rect [ 252.2835 395.4887 292.9989 403.4087 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 6 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/BezaleelPaul/Drishti-AI)
->> /Border [ 0 0 0 ] /Rect [ 298.5033 395.4887 319.4121 403.4087 ] /Subtype /Link /Type /Annot
->>
+<< /Length 7357 >>
+stream
+0.07 0.10 0.16 rg BT /F2 23 Tf 40 800 Td (BEZALEEL PAUL N) Tj ET
+0.55 0.68 0.00 rg BT /F2 9 Tf 40 782 Td (COMPUTER SCIENCE  |  APPLIED AI  |  SOFTWARE ENGINEERING) Tj ET
+0.32 0.38 0.45 rg BT /F1 7.5 Tf 40 765 Td (Bengaluru, India  |  +91 78923 47356  |  bezaleel321@gmail.com) Tj ET
+0.32 0.38 0.45 rg BT /F1 7.2 Tf 40 752 Td (linkedin.com/in/bezaleel-pauln  |  github.com/BezaleelPaul  |  bezaleel-paul-portfolio.vercel.app) Tj ET
+0.82 0.86 0.90 RG 0.6 w 40 739 m 555 739 l S
+0.12 0.16 0.22 rg BT /F2 9 Tf 40 718 Td (EDUCATION) Tj ET
+0.65 0.78 0.05 RG 1.1 w 40 713 m 190 713 l S
+0.12 0.16 0.22 rg BT /F2 8.2 Tf 40 700 Td (CMR University) Tj ET
+0.12 0.16 0.22 rg BT /F1 7.2 Tf 40 688 Td (B.Tech - Computer Science & Engineering | 2025-2029) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 40 676 Td (Second-year undergraduate.) Tj ET
+0.12 0.16 0.22 rg BT /F2 8.2 Tf 40 657 Td (IIT Madras) Tj ET
+0.12 0.16 0.22 rg BT /F1 7.2 Tf 40 645 Td (BS - Data Science & Applications | 2026-2030) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 40 633 Td (Pursuing alongside the B.Tech programme.) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 40 608 Td (TECHNICAL TOOLKIT) Tj ET
+0.65 0.78 0.05 RG 1.1 w 40 603 m 190 603 l S
+0.12 0.16 0.22 rg BT /F2 7.3 Tf 40 590 Td (Languages) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 40 579 Td (Python, Dart, JavaScript, TypeScript, C/C++) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.3 Tf 40 555 Td (Application) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 40 544 Td (Flutter, Next.js, React, FastAPI, Flask) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.3 Tf 40 520 Td (AI & Data) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 40 509 Td (TensorFlow, XGBoost, Scikit-learn, Pandas, Plotly) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.3 Tf 40 485 Td (Engineering) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 40 474 Td (REST APIs, Git/GitHub, Firebase, Linux, SQL) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.3 Tf 40 450 Td (Foundations) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 40 439 Td (DSA, OOP, Computer Vision, Model Evaluation) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 40 413 Td (PROBLEM SOLVING) Tj ET
+0.65 0.78 0.05 RG 1.1 w 40 408 m 190 408 l S
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 40 394 Td (LeetCode - 135 solved) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 40 381 Td (Codeforces - 959 rating) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 40 368 Td (GitHub - 34 repositories) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.5 Tf 40 354 Td (leetcode.com/u/BezaleelPaulN) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.2 Tf 40 343 Td (codeforces.com/profile/BezaleelPaulN2228) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 40 316 Td (CREATIVE PRACTICE) Tj ET
+0.65 0.78 0.05 RG 1.1 w 40 311 m 190 311 l S
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 40 297 Td (Guitar & music production) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.6 Tf 40 285 Td (Electric guitar; REAPER, Waveform, LMMS;) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.6 Tf 40 275 Td (VST instruments/effects; recording and) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.6 Tf 40 265 Td (sound design.) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 230 718 Td (PROFILE) Tj ET
+0.65 0.78 0.05 RG 1.1 w 230 713 m 380 713 l S
+0.12 0.16 0.22 rg BT /F1 7.4 Tf 230 700 Td (Second-year Computer Science undergraduate at CMR University,) Tj ET
+0.12 0.16 0.22 rg BT /F1 7.4 Tf 230 689 Td (also pursuing the BS in Data Science and Applications at IIT) Tj ET
+0.12 0.16 0.22 rg BT /F1 7.4 Tf 230 678 Td (Madras. Focused on applied AI and software engineering:) Tj ET
+0.12 0.16 0.22 rg BT /F1 7.4 Tf 230 667 Td (building practical applications, exploring explainable machine) Tj ET
+0.12 0.16 0.22 rg BT /F1 7.4 Tf 230 656 Td (learning, and turning technical ideas into usable products.) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 230 632 Td (EXPERIENCE & LEADERSHIP) Tj ET
+0.65 0.78 0.05 RG 1.1 w 230 627 m 380 627 l S
+0.12 0.16 0.22 rg BT /F2 7.6 Tf 230 614 Td (Software Development Intern | Eazy Walkers Digital) Tj ET
+0.35 0.40 0.47 rg BT /F1 6.7 Tf 230 603 Td (India | Sep 2026-Present) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 230 592 Td (Contributing to software development work in a professional) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 230 582 Td (team environment.) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.6 Tf 230 564 Td (Former EXCOM Member & Webmaster Volunteer) Tj ET
+0.35 0.40 0.47 rg BT /F1 6.6 Tf 230 553 Td (IEEE CMR University Student Branch | Dec 2025-Sep 2026) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 230 542 Td (Maintained student-branch web experiences with Next.js and) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 230 532 Td (modern frontend tooling; supported its digital presence.) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.6 Tf 230 514 Td (Team Lead | Drishti-AI \(SIH 2026 software prototype\)) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 230 503 Td (Leading a multidisciplinary explainable-AI prototype for) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 230 493 Td (diabetic-retinopathy screening; coordinating model, safety,) Tj ET
+0.12 0.16 0.22 rg BT /F1 7 Tf 230 483 Td (clinical-workflow and Flutter application workstreams.) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 230 459 Td (SELECTED PROJECTS) Tj ET
+0.65 0.78 0.05 RG 1.1 w 230 454 m 380 454 l S
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 230 440 Td (Drishti-AI - Explainable Retinal Screening) Tj ET
+0.35 0.40 0.47 rg BT /F1 6.5 Tf 230 430 Td (Python, TensorFlow, Flutter, Computer Vision, XAI) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 420 Td (Fundus quality assessment, DR grading, model evidence and) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 410 Td (clinician-in-the-loop review in a Smart India Hackathon prototype.) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 230 398 Td (PORTFOLIO ENTRY) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 312 398 Td (SOURCE REPOSITORY) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 230 379 Td (Orbital Observatory - 3D Keplerian Engine) Tj ET
+0.35 0.40 0.47 rg BT /F1 6.5 Tf 230 369 Td (Next.js, TypeScript, React Three Fiber, Three.js) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 359 Td (Interactive planetarium with a custom Keplerian solver,) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 349 Td (procedural planetary data and multiple camera modes.) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 230 337 Td (PORTFOLIO ENTRY) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 312 337 Td (SOURCE REPOSITORY) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 230 318 Td (Mise - File Organizer & Disk Intelligence) Tj ET
+0.35 0.40 0.47 rg BT /F1 6.5 Tf 230 308 Td (Flutter, Dart, Python, Cross-platform) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 298 Td (Local-first file organizer focused on selective undo, duplicate) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 288 Td (analysis and safer file-organization workflows.) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 230 276 Td (PORTFOLIO ENTRY) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 312 276 Td (SOURCE REPOSITORY) Tj ET
+0.12 0.16 0.22 rg BT /F2 7.5 Tf 230 257 Td (NADICARE Twin Engine) Tj ET
+0.35 0.40 0.47 rg BT /F1 6.5 Tf 230 247 Td (Python, XGBoost, Streamlit, Plotly) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 237 Td (Healthcare digital-twin prototype for physiological response) Tj ET
+0.12 0.16 0.22 rg BT /F1 6.8 Tf 230 227 Td (and recovery modeling with interactive telemetry.) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 230 215 Td (PORTFOLIO ENTRY) Tj ET
+0.35 0.40 0.47 rg BT /F2 6.1 Tf 312 215 Td (SOURCE REPOSITORY) Tj ET
+0.82 0.86 0.90 RG 0.6 w 40 52 m 555 52 l S
+0.35 0.40 0.47 rg BT /F1 6.2 Tf 40 38 Td (BEZALEEL PAUL N.  |  RESUME  |  NOVEMBER 2026) Tj ET
+0.35 0.40 0.47 rg BT /F1 6.2 Tf 230 38 Td (PROJECT ARCHIVE: bezaleel-paul-portfolio.vercel.app/projects/) Tj ET
+endstream
 endobj
 7 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#celestial-observatory-3d)
->> /Border [ 0 0 0 ] /Rect [ 252.2835 343.0887 292.9989 351.0087 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Annot /Subtype /Link /Rect [230 396 305 405] /Border [0 0 0] /A << /S /URI /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#drishti-ai) >> >>
 endobj
 8 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/BezaleelPaul/Orbital-Observatory)
->> /Border [ 0 0 0 ] /Rect [ 298.5033 343.0887 319.4121 351.0087 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Annot /Subtype /Link /Rect [312 396 402 405] /Border [0 0 0] /A << /S /URI /URI (https://github.com/BezaleelPaul/Drishti-AI) >> >>
 endobj
 9 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#file-organizer-ecosystem)
->> /Border [ 0 0 0 ] /Rect [ 252.2835 290.6887 292.9989 298.6087 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Annot /Subtype /Link /Rect [230 335 305 344] /Border [0 0 0] /A << /S /URI /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#celestial-observatory-3d) >> >>
 endobj
 10 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/BezaleelPaul/file_organizer_flutter)
->> /Border [ 0 0 0 ] /Rect [ 298.5033 290.6887 319.4121 298.6087 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Annot /Subtype /Link /Rect [312 335 402 344] /Border [0 0 0] /A << /S /URI /URI (https://github.com/BezaleelPaul/Orbital-Observatory) >> >>
 endobj
 11 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#nadicare-twin-engine)
->> /Border [ 0 0 0 ] /Rect [ 252.2835 238.2887 292.9989 246.2087 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Annot /Subtype /Link /Rect [230 274 305 283] /Border [0 0 0] /A << /S /URI /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#file-organizer-ecosystem) >> >>
 endobj
 12 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/BezaleelPaul/bnmit-nadicare-health)
->> /Border [ 0 0 0 ] /Rect [ 298.5033 238.2887 319.4121 246.2087 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Annot /Subtype /Link /Rect [312 274 402 283] /Border [0 0 0] /A << /S /URI /URI (https://github.com/BezaleelPaul/file_organizer_flutter) >> >>
 endobj
 13 0 obj
-<<
-/Annots [ 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R ] /Contents 17 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 16 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
+<< /Type /Annot /Subtype /Link /Rect [230 213 305 222] /Border [0 0 0] /A << /S /URI /URI (https://bezaleel-paul-portfolio.vercel.app/projects/#nadicare-twin-engine) >> >>
 endobj
 14 0 obj
-<<
-/PageMode /UseNone /Pages 16 0 R /Type /Catalog
->>
-endobj
-15 0 obj
-<<
-/Author (Bezaleel Paul N) /CreationDate (D:20261110111055+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261110111055+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (Bezaleel Paul N \204 Resume) /Trapped /False
->>
-endobj
-16 0 obj
-<<
-/Count 1 /Kids [ 13 0 R ] /Type /Pages
->>
-endobj
-17 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3799
->>
-stream
-Gb!#^>Bef2(4P_Ucr4"X-9/G]T;P&4e'NY2J[Vo1lAI=teG-oUP"]K\a.Fs*2MQ`l>0cE7X<]^DdaknBI?cXb_N-&CqB82W1N[c?+Ut4"&o!)0T\0<jZT!BI;&iMW*Mb['A*=h/>e!]A1jSgb1""I>#jE-)MXD[I(!F$C)hl?i*Q>f@hL665l'l,p9@<Pd[UNFZ/;fH^_aTIN^c3/[#2H0p,qJtP<esr("6+%'Na\"\?!MaVm1)6sJB$E+"*C^hoEAGW65+;6ETi[3pS1O@nCj?SXCCK32#E/B^[d4s_]-1fW7\P%LEFQ.[Yt;(s,Q76*thBgF>bD"5NN"/OX<7$'XHEA#6"VDPp9L8d4L:h%'%s[@ftZY<#&3j&d@p-J0%e-CR'bc6b]:n(:FYc.B7/s)X'RF0jO,)Ua"#O^UaU@"jko_A*tSL,OC2Vq/j$3cSB=e"MNHJK6=L5[l+n=TU<paQfS9$HDBHoisYp[pA3Woc]`\=NlQddGD!JTGs<>*c9?G"*qJaVp$Y%^d_C:`+I=Org6"Y<S?&?6D]jS;'oNH?PZ*)8NE.=GPPc'dUBMn+)u@g5(EF:l1Me(Vq5mQ(Nj\ng6G`fCO$b'1QgQ&*d0![YLjs`iU8o;X7.C25Aa=^r*a]`0`pfobE_@Tr$pO#dJR)!TFP?gkBf/X+YuT.S,[LT7FFYtX/Ur2.Il3<>,a;O>oMQM.(PZX6ZP)D^!<@lhr*9M7F*;u(%CfkH9sE'Xq:P#YqP,D.)n)Hm%K,B[.LuC@W:97T/Cdh+K_[2"l*Ri""j5BL+;7F#N00UgE.U8C%%*<cm($i\L0`*941*.#G3!UD[lUg%ZRo`XrO"KN?6!kRN$`6'1E-'']gZ87@M,FCMcT%G.F/0BAb-;L(ArBGKS0o0(!s=E(_mFg;pZdBOpG"Oa3gXQ9M'j,BL.h^65DT'W7!Z=.];2$(ouS7cD7[nIti\gOcZqA&5=ZpfGiC(<EiD$W>h"_R[1OS9u).>YrG@l@I^!>eYB0>@]AWqPV^UK2!4ub5od")[\,$Q;cGGdPJj,q0Pj]'b^9V=1%T^8p\eEBJ7bS(i/dl=Bh!Gb[QhZHkgjt3#2Y,b5b_7R<j[^7\nRa+e^)o0N_0d.RCmiA*m)o-fVZ0N4`>$4^3A-)mC,RLe<adI)lhnh"e_<,1^S_=;"Qb5\de4hHVq'AHhqr`Hqi_IKG)&8jHcTEG?j3/[fK&B)J(_#CjR7>Af:GO$<B\r_kY&O5_A_G/\n>B#_?8[3K6JEm2a2[7\_e8DM.^U,4Od-lSqWICr!;=YcJLg[kG6L-IIE9&??p1%cT$QMNQOkV8.F"4.9WKKikb@fHc3R6323=@R5u1K:KS]Yj!1OY2K%,T,0%f$([9Eb.@\4o"PPp57F"AK*4Y.!0_+s%e@YJ\r@kDbM^kqL1-Z&=h'lCjgmsWnQo\rM5@<G?c.+S"6;U3Aau4-^rF2a!^jAsSKVm1-_p!Y2h^a:n>Wsm_O=bMl"<C9X<(+uZ(fF9Y3pC"U'-"FRVMpH;Q%t#$n0AHJA53d<2'*\KiF$9lUg-pOY.QVcs5U=<ctDn>`NA(V-J=7)Ac4FJ0KtRXuY[,7@Nf[3HV2.kpD/-+AQ$K\C[h2/D$.E\SUtqC>9E>KW7!&!?P)Qk<!hVrN7sM.hK[D+mE4:JF:,Pk2J3(rS;=S\h3S%*`S)j4>`XOHaA1ICRS+EIqfIl@J;;]I[@AL$DY'YbZ!ZqN-g]aYIHF@3AoPgQ"(<U$`K[D0_7mD,'+d.48(#lqD3EXlj/Nj1`T87g%,O0)N3#pa[6tX.=u5ok].!)V@)nnh?7g]`WFg[@0WsQ92LNg-OWe#^fr7K2/#9S[Yg(]*1Gn;0%T[$2(HCoht@;q\Q53hB6Gf6@VEb>EkS9uhO'[o0<BMrP+"Idq2=s_:8NtAL3D;jQV]B51"m?'A#3L/4ALG=]4ETrmnTPa")c;#"l71IT$ddopeLV9i3M+@#*n7OAkrOpV;&rUG;RWK+S`97+?PA+"8RC#bpB)1!Q>d^&X`m2)E9#A)?rPQ>D4_9$:2"'gn5'Ji(/e5AMI`"/BVFdVgO0G:-nN$"L-91"-H_tZknM9jTEjT9%RmCU8Kl]KtqMtlpaX>A9%2A:o+H`3+&eoAKFeqZ>^IRnK#>#'G=`MZnN0LeIO_kiMJ(Pj[p>3b`9J9r!=uAp6X[2J_.U*-I]U+\:jpCo+U_eXVgc_C]8;=BNhG1L-F$.hJg/!-56cd8,dc<f,6]$\Y'nM!oFp'JBDn./2sqV;kW>=3G!,%o\*j[5rVeFBadZ=;-QS#3c1DrUjS&8DOh1o,uR'4*NnJV!aU3$CnAg?&8UER-Hn!s)YKg/j&;I1E!J_>OY(:iZ[T-pN04aRl&gP9nF'B,04nm$MuL!`fKRgrVkQuf(U^dK,*3nUP$<a,i'k=DH_V`&dVqs,D#[2l+\>*7'*gPEV!Kf-4jQKN)oicD/73?YXqMHDlP:tf7b&IV1%J:j2FXs.qP`a!QXjhSNbWBWl`W'7!t\[6BF$daK3rT,6t?[W3,k3V\2n[3(ODfsmde3anc4o+hr^FZ4$)lr*doY-aF_6SQU%a5EYf_9!PHjt_dZ\3];83m%H"7]$dk!"CBFERMAFX.J8oO,/n4-)<'bsJjq7(gnUUB?M&)o[X\As\03VB1B=;kr^3/4^cF>_B-s75u93AdN=GLfq?;16?Jn&$Z!0/1[Zf_ernk0@5=JrPJO'+b1RUa7gmRWk/jr>;%(IMI>A8K([T0ZcsOlTYk_LhP<GHN;P*5`+:"I]-Nd313f.HF*l"TCm\L1KU_Pkk]_;+nXhG1D7-B5A-UJ>h!12oabgV.</CY3EjH3P.@82Cs.6Od!NGe^cK>&Nh28!ea<W]oM3+%R1[u1k**_R!Jk<2tLp[\fJJ>X(_s;<OX1(:J@=`Wh.op4)Xk:;odN+-"9/G1uXAr-T3R0pc:g3X.Cd*eb;T->MM<p!XCfMojqr4QNk!;p&>UFV]jsNOkJV4nK3Qhe(,UWlQKSUjCsC'A4=mQ3=/*t85i'hG^=LhDC57PK9q4b8eU9CkTeSGAH\/Cb"1#j;$UQ2-]$dl;"BarV\VHbZdcm>ij-2XPQssb<tCg#VhcHubS$=='hpZ54cT'OV_(:lMgjpLVhSJ7"+JlL7`eoRo[,dtaWno:nFFFUoGdE-Kt8o<@#P!](4tktM;A2A-F'lX[_FUH2oK<D0NE5<k,!3V&)a9"Ebb<V,!2D'Lb_XL5BNAG"XKf[8Q[%.-^LkXY53F4`F054\57cj?72)pBRID4PAT8Z:/d2H/@O@;rC)s*OcU)rHpWL?Uht@[<Z(aMGcr1@YcOG-Am(fKiq@**dZB:p0?go?!4l%5+qa]B<(o5%I1VhU!k.)`k&n3To>Ifq1"PeQqs@.(4[/M$3))KMK8d9/?^K"m:WSpW-]'S(M3]\a1W3Mk5iE>A;&aK`U"1!NIC\aLV3L_%\TpFGLbI."Qh_;=j<StF=h7CRd=?jS/<SDG=]cVpS(5[]/c7MrP!&nK#8_jAX5A,>qE9;eEq[H*HZ*1SEJM/#5-qji0CiU\7D\<P^%bc53Br/b-jd2e%lI[k,\Z/B3uJ9?ViX36239U(ig$HaU&Nld;(C$*^68P'qg"gE,#dIbNpunH()jurd#\<mg@S5A>n!m,\9SV"?^o?#>N4GJAt+Zpn4Fk*XpoBhJtEcBHH6fdC3>@)n/!d]SMG%VfY]e:79tSXPMR>;"Vf%jIXmc'=FTAd9ipE_'F<j6C[tncpspd9H2KR\!oE6=^?DG[jrsc6YBoj'J+-C.('~>endstream
+<< /Type /Annot /Subtype /Link /Rect [312 213 402 222] /Border [0 0 0] /A << /S /URI /URI (https://github.com/BezaleelPaul/bnmit-nadicare-health) >> >>
 endobj
 xref
-0 18
+0 15
 0000000000 65535 f 
-0000000061 00000 n 
-0000000112 00000 n 
-0000000219 00000 n 
-0000000331 00000 n 
-0000000446 00000 n 
-0000000661 00000 n 
-0000000855 00000 n 
-0000001084 00000 n 
-0000001287 00000 n 
-0000001516 00000 n 
-000001723 00000 n 
-0000001949 00000 n 
-0000002155 00000 n 
-0000002424 00000 n 
-0000002494 00000 n 
-0000002791 00000 n 
-00000002852 00000 n 
+0000000016 00000 n 
+0000000065 00000 n 
+0000000122 00000 n 
+0000000321 00000 n 
+0000000391 00000 n 
+0000000466 00000 n 
+0000007874 00000 n 
+0000008051 00000 n 
+0000008207 00000 n 
+0000008398 00000 n 
+0000008564 00000 n 
+0000008756 00000 n 
+0000008925 00000 n 
+0000009113 00000 n 
 trailer
-<<
-/ID 
-[<aacfdfcd4642bd60170eaa0014a6ae95><aacfdfcd4642bd60170eaa0014a6ae95>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 15 0 R
-/Root 14 0 R
-/Size 18
->>
+<< /Size 15 /Root 1 0 R >>
 startxref
-6743
+9281
 %%EOF
