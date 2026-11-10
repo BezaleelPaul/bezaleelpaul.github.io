@@ -159,10 +159,11 @@ export default function ResumePage() {
             {/* Action Toolbar */}
             <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1 lg:col-span-4">
               <a
-                href="/resume/"
+                href="/resume.pdf"
+                download="Bezaleel-Paul-Resume.pdf"
                 className="action-button primary w-full !justify-between"
               >
-                <span>OPEN PRINTABLE RÉSUMÉ</span>
+                <span>DOWNLOAD PDF</span>
                 <Download className="h-4 w-4" />
               </a>
               <button
@@ -431,6 +432,29 @@ export default function ResumePage() {
                           ))}
                         </ul>
                       </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Selected Projects */}
+                <section>
+                  <DossierSectionHeading badge="SELECTED WORK">PROJECTS &amp; ENGINEERING</DossierSectionHeading>
+                  <div className="space-y-4">
+                    {data.projects.map((project) => (
+                      <article key={project.name} className="rounded border border-[var(--line)] bg-[rgba(10,10,15,0.45)] p-3">
+                        <h3 className="font-mono text-[11px] font-bold text-[var(--accent)]">{project.name}</h3>
+                        <p className="mt-1 font-mono text-[8px] uppercase tracking-[0.08em] text-[var(--muted)]">{project.tech}</p>
+                        <ul className="mt-2 space-y-1 text-[9.5px] leading-relaxed text-[var(--muted)]">
+                          {project.bullets.map((bullet) => <li key={bullet} className="flex gap-2"><span className="text-[var(--accent)]">•</span><span>{bullet}</span></li>)}
+                        </ul>
+                        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                          {project.links.map((url) => (
+                            <a key={url} href={url} target={url.startsWith('http') ? '_blank' : undefined} rel={url.startsWith('http') ? 'noopener noreferrer' : undefined} className="font-mono text-[8px] font-semibold uppercase tracking-[0.1em] text-[var(--text)] underline decoration-[var(--accent)] underline-offset-4 hover:text-[var(--accent)]">
+                              {url.includes('github.com') ? 'Source repository ↗' : 'Live project ↗'}
+                            </a>
+                          ))}
+                        </div>
+                      </article>
                     ))}
                   </div>
                 </section>
