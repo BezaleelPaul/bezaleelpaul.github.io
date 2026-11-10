@@ -530,6 +530,21 @@ export default function ResumePage() {
                   </a>
                 </section>
 
+                {data.extra?.map((group) => (
+                  <section key={group.title}>
+                    <DossierSectionHeading badge="CREATIVE PRACTICE">{group.title}</DossierSectionHeading>
+                    <div className="space-y-3">
+                      {group.items.map((item) => (
+                        <article key={item.title} className="rounded border border-[var(--line)] bg-[rgba(10,10,15,0.45)] p-3">
+                          <h4 className="font-mono text-[10px] font-bold text-[var(--accent)]">{item.title}</h4>
+                          {item.meta && <p className="mt-1 font-mono text-[8px] uppercase tracking-[0.08em] text-[var(--muted)]">{item.meta}</p>}
+                          {item.bullets?.map((bullet) => <p key={bullet} className="mt-1 text-[9px] leading-relaxed text-[var(--muted)]">{bullet}</p>)}
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+                ))}
+
                 {/* Dossier Bottom Mark */}
                 <footer className="mt-auto border-t border-[var(--line)] pt-4 flex flex-col sm:flex-row justify-between items-center gap-2 font-mono text-[8.5px] uppercase tracking-[0.14em] text-[var(--muted)]">
                   <span>BEZALEEL PAUL N. // BUILD WITH INTENT</span>
