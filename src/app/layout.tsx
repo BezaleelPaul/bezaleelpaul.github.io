@@ -1,63 +1,45 @@
 import type { Metadata } from 'next';
+import { Preloader } from '@/components/motion/Preloader';
+import { SmoothScroll } from '@/components/motion/SmoothScroll';
+import { ScrollAnimations } from '@/components/motion/ScrollAnimations';
 import { SiteMotion } from '@/components/motion/SiteMotion';
-import { PointerExperience } from '@/components/motion/PointerExperience';
+import { CosmicScrollScenes } from '@/components/motion/CosmicScrollScenes';
 import './globals.css';
 
-const motionBootScript = `(function(){try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion-ready');window.setTimeout(function(){if(document.documentElement.dataset.motionBoot!=='on'){document.documentElement.classList.remove('motion-ready')}},3500)}}catch(error){}})();`;
-
 export const metadata: Metadata = {
-  title: 'Bezaleel Paul N — Software Developer',
-  description: 'Software developer building thoughtful mobile, web, and machine-learning products. Computer Science at CMR University and Data Science at IIT Madras.',
-  keywords: [
-    'Bezaleel Paul',
-    'BezForge',
-    'Software Developer',
-    'Flutter Developer',
-    'Full-Stack Developer',
-    'AI ML Engineer',
-    'IIT Madras',
-    'CMR University',
-    'Bangalore'
-  ],
+  title: 'Bezaleel Paul — Applied AI & Software Engineering',
+  description: 'Second-year Computer Science student building practical software and applied-AI projects. B.Tech at CMR University and BS Data Science at IIT Madras.',
+  keywords: ['Bezaleel Paul', 'Applied AI', 'Software Engineering', 'Computer Science', 'Machine Learning', 'CMR University', 'IIT Madras'],
   authors: [{ name: 'Bezaleel Paul N', url: 'https://github.com/BezaleelPaul' }],
   openGraph: {
-    title: 'Bezaleel Paul N — Software Developer',
-    description: 'Software developer · Flutter · Full-stack · AI/ML · Bangalore, India',
+    title: 'Bezaleel Paul — Applied AI & Software Engineering',
+    description: 'Applied AI · Software Engineering · Computer Science · Data Science',
     url: 'https://bezaleelpaul.github.io/',
     siteName: 'Bezaleel Paul',
-    locale: 'en_US',
     type: 'website',
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en">
       <head>
-        <script dangerouslySetInnerHTML={{ __html: motionBootScript }} />
-        <noscript>
-          <style>{`[data-reveal],[data-reveal-item]{opacity:1!important;transform:none!important}`}</style>
-        </noscript>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23111411'/><circle cx='50' cy='50' r='24' fill='%23d9ff63'/></svg>" />
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <meta name="theme-color" content="#0A0A0F" />
       </head>
-      <body className="antialiased bg-paper text-ink overflow-x-hidden">
-        {children}
+      <body>
+        <div id="scroll-progress" aria-hidden="true" />
+        <div id="orbital-cursor" aria-hidden="true" />
+        <div id="orbital-cursor-dot" aria-hidden="true" />
+        <Preloader />
+        <SmoothScroll />
+        <ScrollAnimations />
         <SiteMotion />
-        <PointerExperience />
+        {children}
+        <CosmicScrollScenes />
       </body>
     </html>
   );

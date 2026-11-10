@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, Github } from 'lucide-react';
 import { ProjectItem } from '@/types/portfolio';
+import { HorizontalScrollExperience } from '@/components/motion/HorizontalScrollExperience';
 
 interface ProjectsSectionProps {
   projects: ProjectItem[];
@@ -38,15 +39,23 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
           </div>
         </header>
 
-        <div>
+        <HorizontalScrollExperience>
           {featuredProjects.map((project, index) => (
-            <div key={project.id} data-reveal data-reveal-delay={index * 40}>
+            <div key={project.id} className="horizontal-work-slide" data-reveal data-reveal-delay={index * 40}>
               <article
-                className="project-card grid gap-7 border-b border-ink/15 py-12 lg:grid-cols-12 lg:gap-10 lg:py-16"
+                className="project-card horizontal-work-panel grid gap-7 border-b border-ink/15 py-12 lg:grid-cols-12 lg:gap-10 lg:py-16"
                 data-tilt="2.4"
                 data-spotlight
                 data-cursor-label="INSPECT"
               >
+              <div className="project-image-slot lg:col-span-12" aria-label={`Image placeholder for ${project.title}`}>
+                <div className="project-image-placeholder-mark">IMAGE / {String(index + 1).padStart(2, '0')}</div>
+                <div className="project-image-placeholder-copy">
+                  <span className="eyebrow">Project visual placeholder</span>
+                  <span>Add a screenshot, product render, or project photograph</span>
+                </div>
+                <span className="project-image-placeholder-corner">16:09</span>
+              </div>
               <div className="flex items-start justify-between lg:col-span-1 lg:block">
                 <span className="font-mono text-xs tabular-nums text-ink/35">{String(index + 1).padStart(2, '0')}</span>
                 <span className="eyebrow text-ink/30 lg:mt-3 lg:block">Featured</span>
@@ -142,7 +151,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
               </article>
             </div>
           ))}
-        </div>
+        </HorizontalScrollExperience>
 
         <div
           className="flex flex-col justify-between gap-5 pt-10 sm:flex-row sm:items-center"

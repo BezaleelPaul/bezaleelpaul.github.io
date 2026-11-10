@@ -1,14 +1,14 @@
 {
   "name": "BEZALEEL PAUL",
   "nameAccent": "N",
-  "title": "Software Engineering Intern | Flutter & Full-Stack Developer",
+  "title": "Applied AI & Software Engineering | SWE Intern Candidate",
   "tagline": "Seeking SWE Internship",
   "photo": "photo.jpg",
   "terminal": [
     "$ whoami",
-    "> Flutter & Full-Stack Dev",
-    "$ status",
-    "> open to internships"
+    "> Applied AI + Software Engineering",
+    "$ focus",
+    "> building and validating useful systems"
   ],
   "contact": [
     [
@@ -130,7 +130,7 @@
     "RESTful API & Backend",
     "Database Management Systems"
   ],
-  "summary": "Computer Science undergraduate with hands-on experience building cross-platform Flutter mobile apps and full-stack web applications. Skilled in Dart, Python, JavaScript, and AI tool integration. Seeking a Software Development / Mobile App Development Internship to contribute to real-world engineering projects and grow as a developer.",
+  "summary": "Second-year Computer Science undergraduate at CMR University and IIT Madras BS Data Science student, interested in applied AI and software engineering. Building practical projects across machine learning, explainability, mobile applications, and interactive web systems. Seeking a software engineering internship to contribute to real products while strengthening engineering fundamentals.",
   "experience": [
     {
       "role": "EXCOM Member & Webmaster",
@@ -148,8 +148,8 @@
     "url": "https://bezaleelpaul.github.io/projects/",
     "label": "Scan to view all my projects",
     "display": "bezaleelpaul.github.io/projects",
-    "note": "Flutter apps, AI/ML platforms & full-stack web apps, with source code and live demos"
+    "note": "Selected applied-AI, software engineering, Flutter, and web projects with source code and available demos"
   },
-  "footer": "Open to Software Development / Flutter Internships",
+  "footer": "Open to Software Engineering / Applied AI Internships",
   "extra": []
 }
