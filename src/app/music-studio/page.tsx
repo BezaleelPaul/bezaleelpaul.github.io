@@ -48,6 +48,19 @@ export default function MusicStudioPage() {
         <div className="studio-rule"><span>LISTEN CLOSELY</span><span>01 — 04</span></div>
       </section>
 
+      <section className="studio-portrait" aria-labelledby="studio-portrait-title">
+        <div className="studio-portrait-copy">
+          <p className="studio-kicker">THE PERSON BEHIND THE SOUND / 001</p>
+          <h2 id="studio-portrait-title">BEHIND<br /><span>THE STRINGS.</span></h2>
+          <p>Before the edits, plugins and final mix, it starts with picking up a guitar and playing. This is a glimpse of the hands-on side of my musical journey.</p>
+          <span className="studio-portrait-caption">ELECTRIC GUITAR · PRACTICE · PLAY</span>
+        </div>
+        <figure className="studio-portrait-image">
+          <img src="/164323.jpeg" alt="Bezaleel playing an electric guitar" loading="lazy" />
+          <figcaption>OFF THE CLOCK / ON THE FREQUENCY</figcaption>
+        </figure>
+      </section>
+
       <section className="studio-releases" aria-labelledby="studio-releases-title">
         <div className="studio-section-head studio-releases-head">
           <div><p className="studio-kicker">MELODIC SANCTUM / THE CHANNEL</p><h2 id="studio-releases-title">The most-played frequencies.</h2></div>
