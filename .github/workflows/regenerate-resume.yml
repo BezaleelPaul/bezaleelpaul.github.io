@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - fix/resume-project-links
+      - feat/resume-photo-project-qr
     paths:
       - "src/data/resume.json"
       - "scripts/build_resume_pdf.py"
