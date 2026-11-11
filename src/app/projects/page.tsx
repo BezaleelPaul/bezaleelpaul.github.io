@@ -11,11 +11,15 @@ import { Navbar } from '@/components/layout/Navbar';
 type ArchiveProject = ProjectItem & { isFork?: boolean; archived?: boolean; stars?: number; updatedAt?: string };
 type GitHubRepo = { name: string; html_url: string; description: string | null; language: string | null; topics?: string[]; fork: boolean; archived: boolean; stargazers_count: number; homepage: string | null; updated_at: string };
 
+const GITHUB_CACHE_KEY = 'bp-portfolio-github-repos-v1';
+const GITHUB_CACHE_TTL_MS = 15 * 60 * 1000;
+type CachedRepos = { savedAt: number; repos: GitHubRepo[] };
+
 function classifyRepo(repo: GitHubRepo): ProjectCategory {
   const terms = [repo.name, repo.description || '', repo.language || '', ...(repo.topics || [])].join(' ').toLowerCase();
   if (/flutter|dart|android|ios|mobile/.test(terms)) return 'Flutter & Mobile';
-  if (/artificial intelligence|\\bai\\b|machine learning|\\bml\\b|llm|neural|tensorflow|pytorch|vision|healthcare/.test(terms)) return 'AI / ML';
-  if (/react|next\\.js|javascript|typescript|html|css|website|web app/.test(terms)) return 'Web Development';
+  if (/artificial intelligence|\bai\b|machine learning|\bml\b|llm|neural|tensorflow|pytorch|vision|healthcare/.test(terms)) return 'AI / ML';
+  if (/react|next\.js|javascript|typescript|html|css|website|web app/.test(terms)) return 'Web Development';
   if (/api|backend|full.?stack|server|database/.test(terms)) return 'Full-Stack';
   return 'Open Source';
 }
@@ -59,23 +63,71 @@ export default function ProjectsPage() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [githubProjects, setGithubProjects] = useState<ArchiveProject[]>([]);
-  const [syncState, setSyncState] = useState<'loading' | 'ready' | 'error'>('loading');
+  const [syncState, setSyncState] = useState<'loading' | 'ready' | 'cached' | 'error'>('loading');
+  const [refreshVersion, setRefreshVersion] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
-    fetch('https://api.github.com/users/BezaleelPaul/repos?per_page=100&type=owner&sort=updated')
-      .then((response) => {
-        if (!response.ok) throw new Error('GitHub API returned ' + response.status);
-        return response.json() as Promise<GitHubRepo[]>;
-      })
-      .then((repos) => {
+    const readCache = (): CachedRepos | null => {
+      try {
+        const raw = window.sessionStorage.getItem(GITHUB_CACHE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw) as CachedRepos;
+        return Array.isArray(parsed.repos) ? parsed : null;
+      } catch {
+        return null;
+      }
+    };
+
+    const cached = readCache();
+    const filterVisible = (repos: GitHubRepo[]) => repos.filter((repo) =>
+      repo && repo.html_url && repo.name &&
+      repo.name.toLowerCase() !== 'bezaleelpaul.github.io' &&
+      !(repo.topics || []).includes('portfolio-hide')
+    );
+
+    if (refreshVersion === 0 && cached && Date.now() - cached.savedAt < GITHUB_CACHE_TTL_MS) {
+      setGithubProjects(filterVisible(cached.repos).map(toGitHubProject));
+      setSyncState('cached');
+      return () => { cancelled = true; };
+    }
+
+    const syncRepositories = async () => {
+      try {
+        const allRepos: GitHubRepo[] = [];
+        for (let page = 1; page <= 10; page += 1) {
+          const response = await fetch(
+            'https://api.github.com/users/BezaleelPaul/repos?per_page=100&page=' + page + '&type=owner&sort=updated',
+            { headers: { Accept: 'application/vnd.github+json' } }
+          );
+          if (!response.ok) throw new Error('GitHub API returned ' + response.status);
+          const repos = await response.json() as GitHubRepo[];
+          allRepos.push(...repos);
+          if (repos.length < 100) break;
+        }
+
         if (cancelled) return;
-        setGithubProjects(repos.filter((repo) => repo && repo.html_url && repo.name).map(toGitHubProject));
+        try {
+          window.sessionStorage.setItem(GITHUB_CACHE_KEY, JSON.stringify({ savedAt: Date.now(), repos: allRepos } satisfies CachedRepos));
+        } catch {
+          // Storage may be unavailable; the live repository list still works.
+        }
+        setGithubProjects(filterVisible(allRepos).map(toGitHubProject));
         setSyncState('ready');
-      })
-      .catch(() => { if (!cancelled) setSyncState('error'); });
+      } catch {
+        if (cancelled) return;
+        if (cached) {
+          setGithubProjects(filterVisible(cached.repos).map(toGitHubProject));
+          setSyncState('cached');
+        } else {
+          setSyncState('error');
+        }
+      }
+    };
+
+    void syncRepositories();
     return () => { cancelled = true; };
-  }, []);
+  }, [refreshVersion]);
 
   const allProjects = useMemo<ArchiveProject[]>(() => {
     const discovered = new Map(githubProjects.map((project) => [project.repoUrl.toLowerCase(), project]));
@@ -141,12 +193,24 @@ export default function ProjectsPage() {
           </header>
 
 
-          <div className="border-b border-white/15 py-3" aria-live="polite">
+          <div className="flex items-center justify-between gap-4 border-b border-white/15 py-3" aria-live="polite">
             <p className="font-mono text-[9px] uppercase tracking-[0.1em] text-white/45">
               {syncState === 'loading' && 'Syncing public repositories from GitHub…'}
               {syncState === 'ready' && 'Live GitHub sync · ' + githubProjects.length + ' public repositories found'}
+              {syncState === 'cached' && 'Recently synced GitHub data · ' + githubProjects.length + ' public repositories'}
               {syncState === 'error' && 'GitHub sync unavailable · showing curated projects only'}
             </p>
+            <button
+              type="button"
+              onClick={() => {
+                try { window.sessionStorage.removeItem(GITHUB_CACHE_KEY); } catch { /* Storage may be unavailable. */ }
+                setSyncState('loading');
+                setRefreshVersion((version) => version + 1);
+              }}
+              className="shrink-0 font-mono text-[9px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors hover:text-[#D7FF00]"
+            >
+              Refresh GitHub
+            </button>
           </div>
           <div className="border-b border-white/15 py-7" data-reveal data-reveal-delay="80">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
