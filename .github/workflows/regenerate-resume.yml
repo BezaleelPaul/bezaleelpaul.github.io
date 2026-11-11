@@ -2,6 +2,7 @@ name: Regenerate résumé PDF and QR
 on:
   push:
     branches:
+      - main
       - fix/resume-project-links
       - feat/resume-photo-project-qr
     paths:
