@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, AudioLines, Guitar, Headphones, Music2, SlidersHorizontal, Upload, Waves } from 'lucide-react';
 import Link from 'next/link';
 import './music-studio.css';
+import guitarPhoto from './guitar-photo';
 
 export default function MusicStudioPage() {
   const [audioUrl, setAudioUrl] = useState('');
@@ -126,10 +127,14 @@ export default function MusicStudioPage() {
       </section>
 
       <section className="studio-workflow" aria-label="Physical and digital music workflow">
-        <article className="studio-workflow-card">
+        <article className="studio-workflow-card studio-workflow-physical">
           <span className="studio-workflow-number">01 / THE PHYSICAL SIDE</span>
           <h3>Play. Capture. Perform.</h3>
           <p>Guitars, hands-on playing, recorded takes and the small details of performance that give a track its character.</p>
+          <figure className="studio-guitar-portrait">
+            <img src={guitarPhoto} alt="Bezaleel playing an electric guitar during a practice session" />
+            <figcaption><span>IN THE ROOM</span><span>ELECTRIC GUITAR / SESSION 001</span></figcaption>
+          </figure>
           <div className="studio-workflow-tags"><span>Electric guitar</span><span>Acoustic guitar</span><span>Recorded performances</span></div>
         </article>
         <article className="studio-workflow-card studio-workflow-digital">
