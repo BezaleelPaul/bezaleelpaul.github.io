@@ -76,7 +76,7 @@ def section(label):
 def bullet(value):
     return P("• " + escape(value), "Bullet")
 
-portrait_path = PUBLIC / "assets/portrait-processed.webp"
+portrait_path = PUBLIC / "photo.jpg"
 left = []
 if portrait_path.exists():
     portrait = RLImage(str(portrait_path), width=27 * mm, height=31 * mm, kind="proportional")
@@ -120,9 +120,18 @@ right += section("Selected engineering projects")
 for project in DATA.get("projects", []):
     right.append(P(escape(project["name"]), "Project"))
     right.append(P(escape(project.get("tech", "")), "Small"))
+    project_entry = next((url for url in project.get("links", []) if "/projects/#" in url), None)
+    if project_entry:
+        project_href = project_entry if project_entry.startswith("http") else "https://bezaleel-paul-portfolio.vercel.app" + project_entry
+        safe_project_href = escape(project_href, {'"': '&quot;'})
+        right.append(P(f'<link href="{safe_project_href}" color="#10233F">{escape(project["name"])}</link>', "Project"))
     for url in project.get("links", []):
-        safe_url = escape(url, {'"': '&quot;'})
-        right.append(P(f'<link href="{safe_url}" color="#087E80">{safe_url}</link>', "Small"))
+        absolute_url = url if url.startswith("http") else "https://bezaleel-paul-portfolio.vercel.app" + (url if url.startswith("/") else "/" + url)
+        safe_url = escape(absolute_url, {'"': '&quot;'})
+        if "/projects/#" in url:
+            continue
+        label = "Source repository ↗" if "github.com" in url else "Live project ↗"
+        right.append(P(f'<link href="{safe_url}" color="#087E80">{label}</link>', "Small"))
     for detail in project.get("bullets", []):
         right.append(bullet(detail))
     right.append(Spacer(1, 1))
