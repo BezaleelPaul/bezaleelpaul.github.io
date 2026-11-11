@@ -37,11 +37,13 @@ class QRFlowable(Flowable):
         self.widget = QrCodeWidget(value, barLevel="M")
         x1, y1, x2, y2 = self.widget.getBounds()
         self.qr_size = max(x2 - x1, y2 - y1)
+        self.drawing = Drawing(self.qr_size, self.qr_size)
+        self.drawing.add(self.widget)
         self.width = self.height = size
     def draw(self):
         self.canv.saveState()
         self.canv.scale(self.size / self.qr_size, self.size / self.qr_size)
-        renderPDF.draw(self.widget, self.canv, 0, 0)
+        renderPDF.draw(self.drawing, self.canv, 0, 0)
         self.canv.restoreState()
 
 navy = colors.HexColor("#10233F")
