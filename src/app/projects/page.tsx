@@ -202,6 +202,7 @@ export default function ProjectsPage() {
               {filteredProjects.map((project, index) => (
                 <article
                   key={project.id}
+                  id={project.id}
                   className="flex flex-col border-b border-white/12 py-9 md:py-11"
                 >
                   <div className="flex items-center justify-between gap-4">

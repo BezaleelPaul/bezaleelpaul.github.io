@@ -50,7 +50,7 @@ export const INITIAL_PROFILE: PilotProfile = {
     { name: "LinkedIn", handle: "in/bezaleel-pauln", url: "https://www.linkedin.com/in/bezaleel-pauln/", icon: "linkedin", primary: true },
     { name: "X (Twitter)", handle: "@BezaleelPaul1", url: "https://x.com/BezaleelPaul1", icon: "twitter", primary: true },
     { name: "LeetCode", handle: "BezaleelPaulN", url: "https://leetcode.com/u/BezaleelPaulN/", icon: "code", primary: true },
-    { name: "Codeforces", handle: "BezaleelPaulN", url: "https://codeforces.com/profile/BezaleelPaulN", icon: "terminal" },
+    { name: "Codeforces", handle: "BezaleelPaulN", url: "https://codeforces.com/profile/BezaleelPaulN2228", icon: "terminal" },
     { name: "Kaggle", handle: "bezaleelpaul", url: "https://www.kaggle.com/bezaleelpaul", icon: "database" },
     { name: "Email", handle: "bezaleel321@gmail.com", url: "mailto:bezaleel321@gmail.com", icon: "mail", primary: true }
   ]
@@ -327,7 +327,7 @@ export const INITIAL_ACHIEVEMENTS: AchievementItem[] = [
     category: "Competitive Programming",
     summary: "Active participant in timed algorithmic contests testing rapid implementation and asymptotic optimization.",
     metrics: "Handle: BezaleelPaulN",
-    link: "https://codeforces.com/profile/BezaleelPaulN"
+    link: "https://codeforces.com/profile/BezaleelPaulN2228"
   },
   {
     id: "iit-madras-admit",
@@ -442,7 +442,7 @@ export const INITIAL_GITHUB_DATA: GitHubAnalyticsData = {
 
 export const INITIAL_ADMIN_SETTINGS: AdminSettings = {
   publishedAt: "2026-11-01T12:00:00Z",
-  resumeDownloadUrl: "/resume/",
+  resumeDownloadUrl: "/resume.pdf",
   showAiAssistant: true,
   hiddenProjectIds: [],
   featuredProjectIds: ["celestial-observatory-3d", "file-organizer-ecosystem", "drishti-ai"]
