@@ -14,8 +14,8 @@ type GitHubRepo = { name: string; html_url: string; description: string | null; 
 function classifyRepo(repo: GitHubRepo): ProjectCategory {
   const terms = [repo.name, repo.description || '', repo.language || '', ...(repo.topics || [])].join(' ').toLowerCase();
   if (/flutter|dart|android|ios|mobile/.test(terms)) return 'Flutter & Mobile';
-  if (/artificial intelligence|\\bai\\b|machine learning|\\bml\\b|llm|neural|tensorflow|pytorch|vision|healthcare/.test(terms)) return 'AI / ML';
-  if (/react|next\\.js|javascript|typescript|html|css|website|web app/.test(terms)) return 'Web Development';
+  if (/artificial intelligence|\bai\b|machine learning|\bml\b|llm|neural|tensorflow|pytorch|vision|healthcare/.test(terms)) return 'AI / ML';
+  if (/react|next\.js|javascript|typescript|html|css|website|web app/.test(terms)) return 'Web Development';
   if (/api|backend|full.?stack|server|database/.test(terms)) return 'Full-Stack';
   return 'Open Source';
 }
