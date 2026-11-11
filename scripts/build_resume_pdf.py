@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the one-page PDF résumé and matching project-archive QR from resume.json."""
+"""Build the one-page PDF résumé with the real profile photo and project-archive QR."""
 import base64
 import json
 from pathlib import Path
