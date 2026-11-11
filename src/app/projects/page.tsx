@@ -9,7 +9,11 @@ import { Navbar } from '@/components/layout/Navbar';
 
 
 type ArchiveProject = ProjectItem & { isFork?: boolean; archived?: boolean; stars?: number; updatedAt?: string };
-type GitHubRepo = { name: string; html_url: string; description: string | null; language: string | null; topics?: string[]; fork: boolean; archived: boolean; stargazers_count: number; homepage: string | null; updated_at: string };\n\nconst GITHUB_CACHE_KEY = 'bp-portfolio-github-repos-v1';\nconst GITHUB_CACHE_TTL_MS = 15 * 60 * 1000;\ntype CachedRepos = { savedAt: number; repos: GitHubRepo[] };
+type GitHubRepo = { name: string; html_url: string; description: string | null; language: string | null; topics?: string[]; fork: boolean; archived: boolean; stargazers_count: number; homepage: string | null; updated_at: string };
+
+const GITHUB_CACHE_KEY = 'bp-portfolio-github-repos-v1';
+const GITHUB_CACHE_TTL_MS = 15 * 60 * 1000;
+type CachedRepos = { savedAt: number; repos: GitHubRepo[] };
 
 function classifyRepo(repo: GitHubRepo): ProjectCategory {
   const terms = [repo.name, repo.description || '', repo.language || '', ...(repo.topics || [])].join(' ').toLowerCase();
@@ -59,7 +63,8 @@ export default function ProjectsPage() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [githubProjects, setGithubProjects] = useState<ArchiveProject[]>([]);
-  const [syncState, setSyncState] = useState<'loading' | 'ready' | 'cached' | 'error'>('loading');\n  const [refreshVersion, setRefreshVersion] = useState(0);
+  const [syncState, setSyncState] = useState<'loading' | 'ready' | 'cached' | 'error'>('loading');
+  const [refreshVersion, setRefreshVersion] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
