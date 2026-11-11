@@ -8,6 +8,13 @@ on:
       - "src/data/resume.json"
       - "scripts/build_resume_pdf.py"
       - ".github/workflows/regenerate-resume.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "src/data/resume.json"
+      - "scripts/build_resume_pdf.py"
+      - ".github/workflows/regenerate-resume.yml"
   workflow_dispatch:
 permissions:
   contents: write
@@ -17,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
