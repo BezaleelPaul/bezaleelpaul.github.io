@@ -120,13 +120,14 @@ right = [P(escape(DATA["name"] + " " + DATA.get("nameAccent", "")), "Name"),
          P(escape(DATA.get("summary", "")), "Body")]
 right += section("Selected engineering projects")
 for project in DATA.get("projects", []):
-    right.append(P(escape(project["name"]), "Project"))
-    right.append(P(escape(project.get("tech", "")), "Small"))
     project_entry = next((url for url in project.get("links", []) if "/projects/#" in url), None)
     if project_entry:
         project_href = project_entry if project_entry.startswith("http") else "https://bezaleel-paul-portfolio.vercel.app" + project_entry
         safe_project_href = escape(project_href, {'"': '&quot;'})
         right.append(P(f'<link href="{safe_project_href}" color="#10233F">{escape(project["name"])}</link>', "Project"))
+    else:
+        right.append(P(escape(project["name"]), "Project"))
+    right.append(P(escape(project.get("tech", "")), "Small"))
     for url in project.get("links", []):
         absolute_url = url if url.startswith("http") else "https://bezaleel-paul-portfolio.vercel.app" + (url if url.startswith("/") else "/" + url)
         safe_url = escape(absolute_url, {'"': '&quot;'})
