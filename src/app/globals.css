@@ -411,7 +411,12 @@ html.motion-ready [data-word-group] .word-mask [data-word-reveal] {
 
 
 /* Actual orbital movement in the hero, including mobile where WebGL is intentionally off. */
-.hero-signal-visual { contain: layout paint; }
+.hero-signal-visual {
+  contain: layout paint;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
 .hero-signal-rings { transform-style: preserve-3d; }
 .hero-signal-ring {
   position: absolute;
@@ -607,12 +612,13 @@ body.pointer-enhanced .experience-cursor-dot {
   width: clamp(15rem, 28vw, 25rem);
   aspect-ratio: .78;
   overflow: hidden;
-  pointer-events: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
   border: 1px solid rgba(241,239,231,.18);
   border-radius: 48% 48% 2px 2px;
   opacity: .82;
-  transform: translate3d(var(--portrait-x), calc(-50% + var(--portrait-y)), 0)
-    perspective(900px) rotateX(var(--portrait-rotate-x)) rotateY(var(--portrait-rotate-y));
+  transform: translateY(-50%);
   transform-style: preserve-3d;
   transition: opacity 350ms ease, border-color 350ms ease;
   mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
@@ -624,7 +630,7 @@ body.pointer-enhanced .experience-cursor-dot {
   background-size: cover;
   background-position: center 28%;
   filter: grayscale(1) contrast(1.08);
-  transform: translateZ(18px) scale(1.035);
+  transform: none;
 }
 .hero-portrait-depth__shade {
   position: absolute;
@@ -637,7 +643,7 @@ body.pointer-enhanced .experience-cursor-dot {
   inset: 0;
   background: radial-gradient(ellipse at var(--portrait-light-x) var(--portrait-light-y), rgba(217,255,99,.25), transparent 43%);
   mix-blend-mode: screen;
-  transform: translateZ(34px);
+  transform: none;
 }
 .hero-portrait-depth__label {
   position: absolute;
