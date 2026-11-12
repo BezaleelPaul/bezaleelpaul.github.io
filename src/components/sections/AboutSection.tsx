@@ -23,7 +23,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ profile }) => {
 
           <div className="lg:col-span-8">
             <div
-              className="max-w-3xl space-y-6 text-base leading-relaxed text-ink/78 sm:text-lg"
+              className="max-w-3xl space-y-7 text-base leading-relaxed text-ink/78 sm:text-lg"
               data-reveal-group
               data-reveal-delay="80"
             >
@@ -50,7 +50,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ profile }) => {
                   <p className="mt-2 text-sm font-semibold text-ink/75">
                     {education.degree} · {education.field}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-ink/55">
+                  <p className="mt-5 text-sm leading-relaxed text-ink/55">
                     {education.details}
                   </p>
                 </article>
@@ -59,7 +59,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ profile }) => {
 
             <div className="mt-14 border-t border-ink/15 pt-9">
               <p className="eyebrow text-ink/40">How I work</p>
-              <div className="mt-6 grid gap-x-10 gap-y-4 sm:grid-cols-2" data-reveal-group>
+              <div className="mt-6 grid gap-x-10 gap-y-5 sm:grid-cols-2" data-reveal-group>
                 {profile.approach.map((point, index) => (
                   <div
                     key={point}
